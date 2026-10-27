@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA LUXE | Prime Global Real Estate & Private Assets</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #06080a;
+      color: #f1f5f9;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f6eed6 0%, #dec277 50%, #c5a059 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #c5a059 0%, #a7823b 100%);
+    }
+    .glass-panel {
+      background: rgba(14, 18, 26, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-panel-gold {
+      background: rgba(18, 24, 34, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(197, 160, 89, 0.3);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #06080a; }
+    ::-webkit-scrollbar-thumb { background: #1e2638; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #c5a059; }
+  </style>
+</head>
+<body class="antialiased selection:bg-[#c5a059]/30 selection:text-[#f6eed6] overflow-x-hidden">
+
+  <!-- TOP NOTIFICATION / HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#06080a]/85 backdrop-blur-xl border-b border-[#c5a059]/20 py-4 px-4 sm:px-8 transition-all">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg border border-[#c5a059]/40 bg-[#0c0f14] flex items-center justify-center shadow-[0_0_15px_rgba(197,160,89,0.25)]">
+          <span class="font-serif text-xl font-bold gold-gradient-text">A</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif text-lg tracking-[0.22em] font-semibold text-slate-100">AURA LUXE</span>
+          <span class="text-[10px] tracking-[0.35em] text-[#c5a059] uppercase font-light -mt-0.5">Private Estates</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs tracking-[0.18em] uppercase font-medium text-slate-300">
+        <a href="#collection" class="hover:text-[#dec277] transition-colors">Trophy Portfolios</a>
+        <a href="#investor-intelligence" class="hover:text-[#dec277] transition-colors">Investor Modeling</a>
+        <a href="#prime-hubs" class="hover:text-[#dec277] transition-colors">Prime Hubs</a>
+        <a href="#concierge" class="hover:text-[#dec277] transition-colors">VIP Concierge</a>
+        <a href="#vault" class="text-[#c5a059] hover:text-[#f6eed6] transition-colors flex items-center gap-1 font-semibold">
+          ✦ Off-Market Vault
+        </a>
+      </nav>
+
+      <!-- Currency & Actions -->
+      <div class="flex items-center gap-3">
+        <select id="currencySelector" onchange="updateCurrency(this.value)" class="bg-[#121620] border border-white/10 rounded-full px-3 py-1.5 text-xs text-slate-300 focus:outline-none focus:border-[#c5a059] cursor-pointer">
+          <option value="USD">USD ($)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+          <option value="AED">AED (د.إ)</option>
+        </select>
+
+        <button onclick="openShortlist()" class="relative p-2.5 rounded-full border border-white/10 bg-white/5 hover:border-[#c5a059]/50 text-slate-200 hover:text-[#dec277] transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          <span id="shortlistBadge" class="absolute -top-1 -right-1 w-4 h-4 bg-[#c5a059] text-black font-bold text-[10px] rounded-full flex items-center justify-center">2</span>
+        </button>
+
+        <button onclick="openViewingModal('General Private Portfolio Inspection')" class="hidden sm:inline-flex px-5 py-2.5 rounded-full gold-gradient-bg text-black font-semibold text-xs uppercase tracking-wider hover:scale-[1.02] transition-transform shadow-lg shadow-[#c5a059]/20">
+          Private Viewing
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[92vh] flex flex-col justify-center pt-32 pb-16 px-4 sm:px-8 overflow-hidden">
+    <!-- Hero Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img id="heroBg" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=85" alt="Luxury Estate" class="w-full h-full object-cover filter brightness-[0.4] transition-all duration-1000">
+      <div class="absolute inset-0 bg-gradient-to-t from-[#06080a] via-[#06080a]/40 to-black/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-[#06080a]/90 via-[#06080a]/40 to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto w-full">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c5a059]/30 bg-black/50 backdrop-blur-md mb-6">
+        <span class="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span>
+        <span class="text-[11px] font-medium tracking-[0.25em] text-[#dec277] uppercase">
+          Private Client Advisory & Off-Market Portfolio
+        </span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-medium tracking-tight text-white leading-[1.08] max-w-4xl">
+        Where Architectural <br>
+        <span class="italic font-normal gold-gradient-text">Rarity</span> Meets Sovereign Wealth.
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-300 font-light max-w-2xl mt-4 leading-relaxed tracking-wide">
+        Representing the world’s most distinguished penthouses, private waterfront bastions, and generational trophy estates across 18 premier global wealth enclaves.
+      </p>
+
+      <!-- Slide jump buttons -->
+      <div class="flex items-center gap-3 mt-8">
+        <button onclick="switchHeroSlide(0)" class="px-4 py-2 rounded-full glass-panel-gold text-xs text-[#f6eed6] font-medium flex items-center gap-2 hover:bg-[#c5a059]/20 transition-colors">
+          <span>01</span> Manhattan Skycrest ($48.5M)
+        </button>
+        <button onclick="switchHeroSlide(1)" class="px-4 py-2 rounded-full glass-panel text-xs text-slate-300 font-medium flex items-center gap-2 hover:bg-white/10 transition-colors">
+          <span>02</span> Côte d’Azur Villa ($62.0M)
+        </button>
+        <button onclick="switchHeroSlide(2)" class="px-4 py-2 rounded-full glass-panel text-xs text-slate-300 font-medium flex items-center gap-2 hover:bg-white/10 transition-colors">
+          <span>03</span> Trousdale Monolith ($36.0M)
+        </button>
+      </div>
+
+      <!-- Quick Luxury Search Bar -->
+      <div class="mt-12 max-w-5xl glass-panel rounded-2xl p-4 sm:p-5 border border-white/10 shadow-2xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
+          
+          <div class="px-3 border-b sm:border-b-0 sm:border-r border-white/10 pb-2 sm:pb-0">
+            <label class="text-[10px] uppercase tracking-[0.2em] text-[#c5a059] font-semibold block mb-1">Enclave</label>
+            <select id="heroLocationFilter" onchange="applyFilters()" class="w-full bg-transparent text-slate-200 text-xs font-medium focus:outline-none cursor-pointer">
+              <option value="all" class="bg-[#0c0f14]">All Prime Hubs</option>
+              <option value="Manhattan" class="bg-[#0c0f14]">New York (Billionaires’ Row)</option>
+              <option value="French Riviera" class="bg-[#0c0f14]">Côte d’Azur & Monaco</option>
+              <option value="Beverly Hills" class="bg-[#0c0f14]">Beverly Hills (Trousdale)</option>
+              <option value="Dubai" class="bg-[#0c0f14]">Dubai (Palm Jumeirah)</option>
+              <option value="Switzerland" class="bg-[#0c0f14]">St. Moritz & Swiss Alps</option>
+              <option value="London" class="bg-[#0c0f14]">London (Belgravia)</option>
+            </select>
+          </div>
+
+          <div class="px-3 border-b sm:border-b-0 lg:border-r border-white/10 pb-2 sm:pb-0">
+            <label class="text-[10px] uppercase tracking-[0.2em] text-[#c5a059] font-semibold block mb-1">Typology</label>
+            <select id="heroCategoryFilter" onchange="applyFilters()" class="w-full bg-transparent text-slate-200 text-xs font-medium focus:outline-none cursor-pointer">
+              <option value="all" class="bg-[#0c0f14]">All Typologies</option>
+              <option value="penthouse" class="bg-[#0c0f14]">Crown Sky Penthouses</option>
+              <option value="waterfront" class="bg-[#0c0f14]">Waterfront Bastions</option>
+              <option value="architectural" class="bg-[#0c0f14]">Architectural Icons</option>
+              <option value="alpine" class="bg-[#0c0f14]">Alpine Sanctuaries</option>
+            </select>
+          </div>
+
+          <div class="px-3 border-b sm:border-b-0 sm:border-r border-white/10 pb-2 sm:pb-0">
+            <label class="text-[10px] uppercase tracking-[0.2em] text-[#c5a059] font-semibold block mb-1">Capital Tier</label>
+            <select id="heroPriceFilter" onchange="applyFilters()" class="w-full bg-transparent text-slate-200 text-xs font-medium focus:outline-none cursor-pointer">
+              <option value="all" class="bg-[#0c0f14]">Any Capital Tier</option>
+              <option value="under40" class="bg-[#0c0f14]">Under $40,000,000</option>
+              <option value="40to55" class="bg-[#0c0f14]">$40M — $55,000,000</option>
+              <option value="over55" class="bg-[#0c0f14]">$55,000,000+ Trophy Assets</option>
+            </select>
+          </div>
+
+          <div>
+            <a href="#collection" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-semibold text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg">
+              <span>View 6 Estates</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Stats ticker -->
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center max-w-5xl">
+        <div class="glass-panel py-3 px-4 rounded-xl border border-white/5">
+          <div class="font-serif text-2xl font-semibold gold-gradient-text">$4.8B+</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] text-slate-400 mt-0.5">Transacted Volume</div>
+        </div>
+        <div class="glass-panel py-3 px-4 rounded-xl border border-white/5">
+          <div class="font-serif text-2xl font-semibold gold-gradient-text">99.4%</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] text-slate-400 mt-0.5">Strict Confidentiality</div>
+        </div>
+        <div class="glass-panel py-3 px-4 rounded-xl border border-white/5">
+          <div class="font-serif text-2xl font-semibold gold-gradient-text">18 Hubs</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] text-slate-400 mt-0.5">Sovereign Metropolises</div>
+        </div>
+        <div class="glass-panel py-3 px-4 rounded-xl border border-white/5">
+          <div class="font-serif text-2xl font-semibold gold-gradient-text">24/7</div>
+          <div class="text-[10px] uppercase tracking-[0.2em] text-slate-400 mt-0.5">Private Aviation Concierge</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CURATED COLLECTION -->
+  <section id="collection" class="py-24 max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#c5a059]/30 bg-[#c5a059]/10 text-[#dec277] text-[11px] uppercase tracking-[0.25em] font-medium mb-3">
+          ✦ Curated Global Portfolio
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-medium text-white tracking-tight">
+          Exclusively Represented <span class="italic font-normal gold-gradient-text">Masterworks</span>
+        </h2>
+        <p class="text-slate-400 text-sm font-light mt-2 max-w-xl">
+          Each trophy estate undergoes institutional-level title verification, architectural scrutiny, and sovereign privacy vetting.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-2">
+        <button onclick="filterCategory('all', this)" class="category-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold gold-gradient-bg text-black transition-all">All</button>
+        <button onclick="filterCategory('penthouse', this)" class="category-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium glass-panel text-slate-300 hover:text-white transition-all">Penthouses</button>
+        <button onclick="filterCategory('waterfront', this)" class="category-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium glass-panel text-slate-300 hover:text-white transition-all">Waterfront</button>
+        <button onclick="filterCategory('architectural', this)" class="category-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium glass-panel text-slate-300 hover:text-white transition-all">Architectural</button>
+        <button onclick="filterCategory('alpine', this)" class="category-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium glass-panel text-slate-300 hover:text-white transition-all">Alpine</button>
+      </div>
+    </div>
+
+    <!-- Properties Grid -->
+    <div id="propertiesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Injected via JavaScript below -->
+    </div>
+  </section>
+
+  <!-- INVESTOR CALCULATOR -->
+  <section id="investor-intelligence" class="py-24 bg-gradient-to-b from-[#06080a] via-[#0c0f16] to-[#06080a] relative overflow-hidden px-4 sm:px-8 border-y border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#c5a059]/30 bg-[#c5a059]/10 text-[#dec277] text-[11px] uppercase tracking-[0.25em] font-medium mb-3">
+          ✦ Institutional Portfolio Modeling
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-medium text-white tracking-tight">
+          Investor Yield & <span class="italic font-normal gold-gradient-text">Capital Appreciation</span> Engine
+        </h2>
+        <p class="text-slate-400 text-sm font-light mt-3">
+          Simulate cash flow, tax optimization, and 5-year sovereign wealth expansion on ultra-prime acquisitions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Controls Column -->
+        <div class="lg:col-span-6 glass-panel rounded-2xl p-6 sm:p-8 space-y-6">
+          <div class="text-xs uppercase tracking-[0.2em] text-[#c5a059] font-semibold border-b border-white/10 pb-3 flex justify-between">
+            <span>Acquisition Parameters</span>
+            <span class="text-slate-400 font-normal">Real-Time Simulation</span>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-slate-300">Target Asset Acquisition Value</span>
+              <span id="calcValDisplay" class="font-serif text-base text-[#dec277] font-semibold">$35,000,000</span>
+            </div>
+            <input type="range" id="sliderVal" min="5000000" max="100000000" step="1000000" value="35000000" oninput="recalcModel()" class="w-full h-1.5 bg-[#161c28] rounded-lg appearance-none cursor-pointer accent-[#c5a059]">
+            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+              <span>$5M</span>
+              <span>$50M</span>
+              <span>$100M+</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-slate-300">Equity Injected / Down Payment</span>
+              <span id="calcEquityDisplay" class="font-serif text-base text-[#dec277] font-semibold">60% ($21,000,000)</span>
+            </div>
+            <input type="range" id="sliderEquity" min="20" max="100" step="5" value="60" oninput="recalcModel()" class="w-full h-1.5 bg-[#161c28] rounded-lg appearance-none cursor-pointer accent-[#c5a059]">
+            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+              <span>20% (Leveraged)</span>
+              <span>60% (Balanced)</span>
+              <span>100% (All-Cash Tier)</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-slate-300">Projected Annual Net Yield</span>
+              <span id="calcYieldDisplay" class="font-serif text-base text-emerald-400 font-semibold">7.2% / yr</span>
+            </div>
+            <input type="range" id="sliderYield" min="4" max="12" step="0.2" value="7.2" oninput="recalcModel()" class="w-full h-1.5 bg-[#161c28] rounded-lg appearance-none cursor-pointer accent-[#c5a059]">
+            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+              <span>4.0% (Core)</span>
+              <span>7.5% (High Demand)</span>
+              <span>12.0% (Ultra Prime)</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <div class="flex justify-between items-center text-xs">
+              <span class="text-slate-300">5-Year Historical Appreciation Forecast</span>
+              <span id="calcApprecDisplay" class="font-serif text-base text-[#dec277] font-semibold">+38%</span>
+            </div>
+            <input type="range" id="sliderApprec" min="10" max="60" step="1" value="38" oninput="recalcModel()" class="w-full h-1.5 bg-[#161c28] rounded-lg appearance-none cursor-pointer accent-[#c5a059]">
+            <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+              <span>+10%</span>
+              <span>+35%</span>
+              <span>+60%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output Summary Column -->
+        <div class="lg:col-span-6 glass-panel-gold rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between border-b border-[#c5a059]/20 pb-4 mb-6">
+              <div>
+                <span class="text-[10px] uppercase tracking-[0.25em] text-[#c5a059] font-semibold">5-Year Projection</span>
+                <h4 class="font-serif text-2xl text-white font-medium">Wealth Generation Summary</h4>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="p-4 rounded-xl bg-black/50 border border-white/5">
+                <span class="text-[10px] uppercase tracking-wider text-slate-400">Net Annual Rental Revenue</span>
+                <div id="resAnnualRent" class="font-serif text-xl sm:text-2xl font-bold text-emerald-400 mt-1">$2,520,000</div>
+                <span class="text-[10px] text-slate-400">7.2% capitalization rate</span>
+              </div>
+
+              <div class="p-4 rounded-xl bg-black/50 border border-white/5">
+                <span class="text-[10px] uppercase tracking-wider text-slate-400">5Y Equity Growth Gain</span>
+                <div id="resFiveYearGain" class="font-serif text-xl sm:text-2xl font-bold gold-gradient-text mt-1">$13,300,000</div>
+                <span class="text-[10px] text-slate-400">+38% asset appreciation</span>
+              </div>
+            </div>
+
+            <div class="p-5 rounded-xl bg-[#c5a059]/15 border border-[#c5a059]/30 mb-6">
+              <div class="flex justify-between items-start">
+                <div>
+                  <span class="text-[11px] uppercase tracking-[0.2em] text-[#dec277] font-medium">Total 5-Year Capital Expansion</span>
+                  <div id="resTotalReturn" class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">$25,900,000</div>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] uppercase tracking-wider text-slate-400">Annualized Equity ROI</span>
+                  <div id="resEquityRoi" class="text-lg font-bold text-emerald-400 mt-0.5">~24.7% p.a.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs mb-6">
+              <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 text-slate-300 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span>10-Yr Golden Visa Included</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-black/40 border border-white/5 text-slate-300 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#c5a059]"></span>
+                <span>0% CGT Jurisdiction Eligible</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="openViewingModal('Investor Financial Dossier Simulation')" class="w-full py-3.5 rounded-xl gold-gradient-bg text-black font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 hover:scale-[1.02] transition-transform shadow-lg">
+            <span>Request Full Financial Memorandum</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIME HUBS -->
+  <section id="prime-hubs" class="py-24 max-w-7xl mx-auto px-4 sm:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#c5a059]/30 bg-[#c5a059]/10 text-[#dec277] text-[11px] uppercase tracking-[0.25em] font-medium mb-3">
+          ✦ Global Wealth Epicenters
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-medium text-white tracking-tight">
+          Prime <span class="italic font-normal gold-gradient-text">Destinations</span> & Metropolises
+        </h2>
+      </div>
+      <div class="text-xs uppercase tracking-[0.2em] text-[#c5a059] font-semibold">
+        Active In 18 Sovereign Jurisdictions
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Hub 1 -->
+      <div class="glass-panel rounded-2xl overflow-hidden group hover:border-[#c5a059]/50 transition-all hover:-translate-y-2 cursor-pointer">
+        <div class="aspect-[4/5] relative">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=800&q=80" alt="Monaco" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-[0.7]">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#06080a] via-[#06080a]/30 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5">
+            <span class="text-[10px] uppercase tracking-widest text-[#c5a059]">Principality</span>
+            <h3 class="font-serif text-2xl text-white font-medium">Monaco & Riviera</h3>
+            <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-[11px] text-slate-300">
+              <span>Avg: $6,200/sq.ft</span>
+              <span class="text-emerald-400">+38% (5Y)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hub 2 -->
+      <div class="glass-panel rounded-2xl overflow-hidden group hover:border-[#c5a059]/50 transition-all hover:-translate-y-2 cursor-pointer">
+        <div class="aspect-[4/5] relative">
+          <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80" alt="Dubai" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-[0.7]">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#06080a] via-[#06080a]/30 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5">
+            <span class="text-[10px] uppercase tracking-widest text-[#c5a059]">United Arab Emirates</span>
+            <h3 class="font-serif text-2xl text-white font-medium">Dubai Palm</h3>
+            <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-[11px] text-slate-300">
+              <span>Avg: $2,100/sq.ft</span>
+              <span class="text-emerald-400">+52% (5Y)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hub 3 -->
+      <div class="glass-panel rounded-2xl overflow-hidden group hover:border-[#c5a059]/50 transition-all hover:-translate-y-2 cursor-pointer">
+        <div class="aspect-[4/5] relative">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Manhattan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-[0.7]">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#06080a] via-[#06080a]/30 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5">
+            <span class="text-[10px] uppercase tracking-widest text-[#c5a059]">United States</span>
+            <h3 class="font-serif text-2xl text-white font-medium">Manhattan Crown</h3>
+            <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-[11px] text-slate-300">
+              <span>Avg: $4,800/sq.ft</span>
+              <span class="text-emerald-400">+28% (5Y)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hub 4 -->
+      <div class="glass-panel rounded-2xl overflow-hidden group hover:border-[#c5a059]/50 transition-all hover:-translate-y-2 cursor-pointer">
+        <div class="aspect-[4/5] relative">
+          <img src="https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?auto=format&fit=crop&w=800&q=80" alt="St. Moritz" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter brightness-[0.7]">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#06080a] via-[#06080a]/30 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5">
+            <span class="text-[10px] uppercase tracking-widest text-[#c5a059]">Switzerland</span>
+            <h3 class="font-serif text-2xl text-white font-medium">St. Moritz Alps</h3>
+            <div class="mt-3 pt-3 border-t border-white/10 flex justify-between text-[11px] text-slate-300">
+              <span>Avg: $3,900/sq.ft</span>
+              <span class="text-emerald-400">+31% (5Y)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCIERGE & VAULT -->
+  <section id="concierge" class="py-24 max-w-7xl mx-auto px-4 sm:px-8">
+    <div id="vault" class="glass-panel-gold rounded-3xl p-8 sm:p-12 mb-16 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div class="max-w-2xl">
+        <div class="text-xs uppercase tracking-[0.25em] text-[#c5a059] font-bold mb-2">✦ The Confidential Vault</div>
+        <h3 class="font-serif text-3xl sm:text-4xl text-white font-medium leading-snug">
+          Gain Access to 40+ Unlisted Off-Market Trophy Properties Under Strict NDA
+        </h3>
+        <p class="text-slate-300 text-sm font-light mt-3 leading-relaxed">
+          Many of the world's most prized estates are never publicly advertised. Access is granted solely through private client verification.
+        </p>
+      </div>
+
+      <button onclick="openViewingModal('Off-Market Vault Accreditation Request')" class="px-8 py-4 rounded-xl gold-gradient-bg text-black font-semibold text-xs uppercase tracking-widest whitespace-nowrap hover:scale-[1.03] transition-transform shadow-xl">
+        Request Vault Accreditation
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-[#06080a] py-12 px-4 sm:px-8 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg border border-[#c5a059]/40 bg-[#0c0f14] flex items-center justify-center">
+          <span class="font-serif text-sm font-bold gold-gradient-text">A</span>
+        </div>
+        <span class="font-serif text-sm tracking-[0.2em] font-semibold text-slate-200">AURA LUXE ESTATES</span>
+      </div>
+
+      <div class="text-[11px] text-center md:text-right text-slate-500">
+        © 2026 AURA LUXE Private Real Estate Advisory. FINMA & DLD Certified Escrow Partners. Confidentiality Guaranteed.
+      </div>
+    </div>
+  </footer>
+
+  <!-- DETAIL MODAL -->
+  <div id="propertyModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+    <div class="relative w-full max-w-4xl bg-[#0c0f14] border border-[#c5a059]/30 rounded-3xl overflow-hidden max-h-[90vh] flex flex-col">
+      <div class="p-6 border-b border-white/10 flex items-center justify-between bg-[#06080a]">
+        <div>
+          <span id="modalTag" class="text-[10px] uppercase tracking-widest text-[#c5a059] font-bold"></span>
+          <h3 id="modalTitle" class="font-serif text-2xl text-white font-medium"></h3>
+        </div>
+        <button onclick="closePropertyModal()" class="p-2 rounded-full bg-white/5 hover:bg-[#c5a059] hover:text-black text-slate-300">
+          ✕
+        </button>
+      </div>
+
+      <div class="overflow-y-auto p-6 space-y-6 flex-grow">
+        <div class="aspect-[16/9] rounded-2xl overflow-hidden bg-black">
+          <img id="modalImg" src="" alt="Estate View" class="w-full h-full object-cover">
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5 text-center text-xs">
+          <div>
+            <div class="text-slate-400">Bedrooms</div>
+            <div id="modalBeds" class="font-serif text-lg font-bold text-white mt-1"></div>
+          </div>
+          <div>
+            <div class="text-slate-400">Bathrooms</div>
+            <div id="modalBaths" class="font-serif text-lg font-bold text-white mt-1"></div>
+          </div>
+          <div>
+            <div class="text-slate-400">Interior Area</div>
+            <div id="modalSqft" class="font-serif text-lg font-bold text-white mt-1"></div>
+          </div>
+          <div>
+            <div class="text-slate-400">Offering Price</div>
+            <div id="modalPrice" class="font-serif text-lg font-bold gold-gradient-text mt-1"></div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-wider text-[#c5a059] font-semibold mb-2">Architectural Narrative</h4>
+          <p id="modalDesc" class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light"></p>
+        </div>
+      </div>
+
+      <div class="p-6 border-t border-white/10 bg-[#06080a] flex justify-between items-center">
+        <span class="text-xs text-slate-400">Swiss Escrow & Family Office Protocol</span>
+        <button id="modalActionBtn" onclick="openViewingFromModal()" class="px-6 py-3 rounded-xl gold-gradient-bg text-black font-semibold text-xs uppercase tracking-wider">
+          Schedule Private Viewing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIEWING SCHEDULER MODAL -->
+  <div id="viewingModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/85 backdrop-blur-md">
+    <div class="relative w-full max-w-lg bg-[#0c0f14] border border-[#c5a059]/40 rounded-3xl p-6 sm:p-8">
+      <button onclick="closeViewingModal()" class="absolute top-5 right-5 p-2 rounded-full bg-white/5 hover:bg-[#c5a059] hover:text-black text-slate-300">
+        ✕
+      </button>
+
+      <div class="text-center mb-6">
+        <span class="text-[10px] uppercase tracking-[0.25em] text-[#c5a059] font-bold">Confidential Protocol</span>
+        <h3 class="font-serif text-2xl text-white font-medium mt-1">Arrange Discreet Inspection</h3>
+        <p id="viewingTargetText" class="text-xs text-slate-400 mt-1"></p>
+      </div>
+
+      <form onsubmit="handleViewingSubmit(event)" class="space-y-4">
+        <div>
+          <label class="block text-[10px] uppercase tracking-wider text-slate-400 mb-1">Full Legal Name *</label>
+          <input type="text" required placeholder="e.g. Lord Alexander Sterling" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06080a] border border-white/10 text-white text-xs focus:border-[#c5a059] outline-none">
+        </div>
+
+        <div>
+          <label class="block text-[10px] uppercase tracking-wider text-slate-400 mb-1">Secure Email *</label>
+          <input type="email" required placeholder="office@familycapital.ch" class="w-full px-3.5 py-2.5 rounded-xl bg-[#06080a] border border-white/10 text-white text-xs focus:border-[#c5a059] outline-none">
+        </div>
+
+        <div>
+          <label class="block text-[10px] uppercase tracking-wider text-slate-400 mb-1">Inspection Format</label>
+          <select class="w-full px-3.5 py-2.5 rounded-xl bg-[#06080a] border border-white/10 text-white text-xs focus:border-[#c5a059] outline-none cursor-pointer">
+            <option>In-Person Private Tasting & Walkthrough</option>
+            <option>Helicopter Aerial Flyover Tour</option>
+            <option>Encrypted 4K Ultra-HD Live Stream</option>
+          </select>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl gold-gradient-bg text-black font-semibold text-xs uppercase tracking-widest hover:scale-[1.01] transition-transform shadow-xl mt-4">
+          Confirm Confidential Viewing Request
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const ESTATES = [
+      {
+        id: 'aura-01',
+        title: 'The Skycrest Penthouse',
+        subtitle: 'Triplex Crown with 360° Skyline & Harbor Vistas',
+        tag: 'Trophy Asset',
+        category: 'penthouse',
+        location: 'Central Park South, Manhattan, New York',
+        priceUSD: 48500000,
+        beds: 6,
+        baths: 8,
+        sqft: 11400,
+        yield: '7.1%',
+        growth: '+34%',
+        image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
+        desc: 'Hovering 1,000 feet above Central Park, The Skycrest Penthouse is a masterwork of structural poetry. Spanning three full levels of sculpted travertine, bookmatched Calacatta marble, and floor-to-ceiling ultra-clear acoustic glazing.'
+      },
+      {
+        id: 'aura-02',
+        title: 'Villa Palais de l’Océan',
+        subtitle: 'Palatial Waterfront Sanctuary with Private Deep-Water Jetty',
+        tag: 'Off-Market Exclusive',
+        category: 'waterfront',
+        location: 'Cap d’Antibes, Côte d’Azur, France',
+        priceUSD: 62000000,
+        beds: 9,
+        baths: 12,
+        sqft: 16800,
+        yield: '6.5%',
+        growth: '+41%',
+        image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1200&q=80',
+        desc: 'Immersed in the pine-scented breeze of Cap d’Antibes, this Mediterranean stronghold features private 45-meter superyacht berthing and centuries-old olive gardens.'
+      },
+      {
+        id: 'aura-03',
+        title: 'The Trousdale Monolith',
+        subtitle: 'Zero-Edge Architectural Marvel with Jetliner Views',
+        tag: 'Architectural Icon',
+        category: 'architectural',
+        location: 'Trousdale Estates, Beverly Hills, California',
+        priceUSD: 36000000,
+        beds: 5,
+        baths: 7,
+        sqft: 9800,
+        yield: '8.4%',
+        growth: '+37%',
+        image: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
+        desc: 'Perched on the crown of Trousdale Estates, this architectural monument redefines modern ultra-luxury with board-formed concrete and 120-foot infinity swimming.'
+      },
+      {
+        id: 'aura-04',
+        title: 'The Palm Royale Residence',
+        subtitle: 'Frond-Tip Island Palace with Private White Sand Lagoon',
+        tag: 'Waterfront Crown',
+        category: 'waterfront',
+        location: 'Palm Jumeirah, Dubai, UAE',
+        priceUSD: 54000000,
+        beds: 8,
+        baths: 11,
+        sqft: 18200,
+        yield: '9.2%',
+        growth: '+48%',
+        image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80',
+        desc: 'An iconic presence on the most coveted tip of Palm Jumeirah with 200 feet of private beachfront and 10-Year UAE Golden Visa eligibility.'
+      },
+      {
+        id: 'aura-05',
+        title: 'Chalet Grand Bellevue',
+        subtitle: 'Ski-In / Ski-Out Alpine Estate with Matterhorn Views',
+        tag: 'Alpine Sanctuary',
+        category: 'alpine',
+        location: 'St. Moritz, Engadin, Switzerland',
+        priceUSD: 42000000,
+        beds: 7,
+        baths: 9,
+        sqft: 12500,
+        yield: '6.2%',
+        growth: '+29%',
+        image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80',
+        desc: 'Positioned in the legendary Suvretta enclave of St. Moritz, Chalet Grand Bellevue combines heritage Alpine stone and hand-hewn larch timber with high-tech Swiss sustainability.'
+      },
+      {
+        id: 'aura-06',
+        title: 'The Belgravia Manor',
+        subtitle: 'Regency Period Masterpiece Restored for Modern Dynasties',
+        tag: 'Historic Trophy',
+        category: 'penthouse',
+        location: 'Belgrave Square, London, UK',
+        priceUSD: 52000000,
+        beds: 7,
+        baths: 9,
+        sqft: 13800,
+        yield: '6.4%',
+        growth: '+31%',
+        image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80',
+        desc: 'An indisputable pillar of British architectural heritage. Built in 1835 and restored with private swimming pool, passenger lift, and mews house.'
+      }
+    ];
+
+    const RATES = {
+      USD: { symbol: '$', rate: 1 },
+      EUR: { symbol: '€', rate: 0.92 },
+      GBP: { symbol: '£', rate: 0.79 },
+      AED: { symbol: 'AED ', rate: 3.67 }
+    };
+
+    let activeCurrency = 'USD';
+    let currentCategory = 'all';
+    let savedList = ['aura-01', 'aura-02'];
+    let currentViewingTarget = '';
+
+    function formatPrice(usd) {
+      const c = RATES[activeCurrency];
+      const val = (usd * c.rate).toLocaleString('en-US', { maximumFractionDigits: 0 });
+      return c.symbol + val;
+    }
+
+    function renderProperties() {
+      const grid = document.getElementById('propertiesGrid');
+      grid.innerHTML = '';
+
+      const filtered = ESTATES.filter(p => {
+        if (currentCategory !== 'all' && p.category !== currentCategory) return false;
+        return true;
+      });
+
+      filtered.forEach(p => {
+        const isSaved = savedList.includes(p.id);
+        const card = document.createElement('div');
+        card.className = "group rounded-2xl overflow-hidden glass-panel border border-white/10 hover:border-[#c5a059]/40 transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between";
+        card.innerHTML = `
+          <div class="relative aspect-[16/10] overflow-hidden cursor-pointer" onclick="openPropertyModal('${p.id}')">
+            <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#06080a] via-transparent to-black/40"></div>
+            <div class="absolute top-4 left-4">
+              <span class="px-3 py-1 rounded-full text-[10px] uppercase tracking-wider font-semibold bg-black/80 backdrop-blur-md text-[#dec277] border border-[#c5a059]/30">
+                ${p.tag}
+              </span>
+            </div>
+            <button onclick="toggleSave(event, '${p.id}')" class="absolute top-4 right-4 p-2.5 rounded-full ${isSaved ? 'bg-[#c5a059] text-black' : 'bg-black/50 text-slate-300'} backdrop-blur-md">
+              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            </button>
+          </div>
+          <div class="p-6 flex flex-col justify-between flex-grow">
+            <div>
+              <div class="text-[10px] uppercase tracking-wider text-[#c5a059] font-medium mb-1">${p.location}</div>
+              <h3 onclick="openPropertyModal('${p.id}')" class="font-serif text-2xl font-medium text-white group-hover:text-[#dec277] cursor-pointer transition-colors">${p.title}</h3>
+              <p class="text-xs text-slate-400 mt-1 line-clamp-1 font-light">${p.subtitle}</p>
+              
+              <div class="grid grid-cols-3 gap-2 py-3 my-3 border-y border-white/10 text-xs text-slate-300">
+                <div><strong>${p.beds}</strong> Beds</div>
+                <div><strong>${p.baths}</strong> Baths</div>
+                <div><strong>${p.sqft.toLocaleString()}</strong> Sq Ft</div>
+              </div>
+
+              <div class="flex justify-between items-center text-[11px] text-slate-400 mb-4 bg-white/[0.02] p-2 rounded-lg">
+                <span>Yield: <strong class="text-emerald-400">${p.yield}</strong></span>
+                <span>Growth: <strong class="text-[#dec277]">${p.growth}</strong></span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2">
+              <div>
+                <span class="text-[9px] uppercase tracking-wider text-slate-400">Offering</span>
+                <div class="font-serif text-xl font-bold gold-gradient-text">${formatPrice(p.priceUSD)}</div>
+              </div>
+              <button onclick="openPropertyModal('${p.id}')" class="px-4 py-2 rounded-xl gold-gradient-bg text-black font-semibold text-xs uppercase tracking-wider">
+                Dossier
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function filterCategory(cat, btn) {
+      currentCategory = cat;
+      document.querySelectorAll('.category-btn').forEach(b => {
+        b.className = "category-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-medium glass-panel text-slate-300 hover:text-white transition-all";
+      });
+      btn.className = "category-btn px-4 py-2 rounded-full text-xs uppercase tracking-wider font-semibold gold-gradient-bg text-black transition-all";
+      renderProperties();
+    }
+
+    function toggleSave(e, id) {
+      e.stopPropagation();
+      if (savedList.includes(id)) {
+        savedList = savedList.filter(item => item !== id);
+      } else {
+        savedList.push(id);
+      }
+      document.getElementById('shortlistBadge').innerText = savedList.length;
+      renderProperties();
+    }
+
+    function updateCurrency(curr) {
+      activeCurrency = curr;
+      renderProperties();
+      recalcModel();
+    }
+
+    function switchHeroSlide(idx) {
+      const heroBg = document.getElementById('heroBg');
+      heroBg.src = ESTATES[idx].image;
+    }
+
+    function recalcModel() {
+      const price = parseFloat(document.getElementById('sliderVal').value);
+      const eqPct = parseFloat(document.getElementById('sliderEquity').value);
+      const yieldPct = parseFloat(document.getElementById('sliderYield').value);
+      const apprecPct = parseFloat(document.getElementById('sliderApprec').value);
+
+      document.getElementById('calcValDisplay').innerText = formatPrice(price);
+      document.getElementById('calcEquityDisplay').innerText = `${eqPct}% (${formatPrice(price * eqPct / 100)})`;
+      document.getElementById('calcYieldDisplay').innerText = `${yieldPct.toFixed(1)}% / yr`;
+      document.getElementById('calcApprecDisplay').innerText = `+${apprecPct}%`;
+
+      const annualRent = (price * yieldPct) / 100;
+      const fiveGain = (price * apprecPct) / 100;
+      const totalRet = (annualRent * 5) + fiveGain;
+      const eqInvested = (price * eqPct) / 100;
+      const annualizedRoi = ((totalRet / eqInvested) / 5) * 100;
+
+      document.getElementById('resAnnualRent').innerText = formatPrice(annualRent);
+      document.getElementById('resFiveYearGain').innerText = formatPrice(fiveGain);
+      document.getElementById('resTotalReturn').innerText = formatPrice(totalRet);
+      document.getElementById('resEquityRoi').innerText = `~${annualizedRoi.toFixed(1)}% p.a.`;
+    }
+
+    function openPropertyModal(id) {
+      const p = ESTATES.find(item => item.id === id);
+      if (!p) return;
+      document.getElementById('modalTag').innerText = p.tag;
+      document.getElementById('modalTitle').innerText = p.title;
+      document.getElementById('modalImg').src = p.image;
+      document.getElementById('modalBeds').innerText = p.beds + ' Suites';
+      document.getElementById('modalBaths').innerText = p.baths + ' Baths';
+      document.getElementById('modalSqft').innerText = p.sqft.toLocaleString() + ' Sq Ft';
+      document.getElementById('modalPrice').innerText = formatPrice(p.priceUSD);
+      document.getElementById('modalDesc').innerText = p.desc;
+      currentViewingTarget = p.title;
+
+      const modal = document.getElementById('propertyModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePropertyModal() {
+      const modal = document.getElementById('propertyModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function openViewingFromModal() {
+      closePropertyModal();
+      openViewingModal(currentViewingTarget);
+    }
+
+    function openViewingModal(target) {
+      currentViewingTarget = target || 'General Portfolio Inspection';
+      document.getElementById('viewingTargetText').innerText = `Regarding: ${currentViewingTarget}`;
+      const modal = document.getElementById('viewingModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeViewingModal() {
+      const modal = document.getElementById('viewingModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleViewingSubmit(e) {
+      e.preventDefault();
+      alert('Confidential viewing request registered. Our Senior Managing Partner will contact you within 2 hours.');
+      closeViewingModal();
+    }
+
+    function openShortlist() {
+      alert(`Your Saved Portfolio contains ${savedList.length} properties. Click 'Dossier' on any saved card to review specifications.`);
+    }
+
+    // Initialize on page load
+    renderProperties();
+    recalcModel();
+  </script>
+</body>
+</html>
