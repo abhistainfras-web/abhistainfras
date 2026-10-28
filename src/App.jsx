@@ -169,14 +169,14 @@ export default function App() {
         )}
 
         {/* Floating Quick Action Buttons */}
-        <div className="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+        <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col gap-2.5 sm:gap-3 items-end">
           {showScrollTop && (
             <button
               onClick={scrollToTop}
-              className="w-11 h-11 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-[#FDB813] hover:text-slate-950 transition-all shadow-lg hover:shadow-xl"
+              className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-slate-900 text-white flex items-center justify-center hover:bg-[#FDB813] hover:text-slate-950 transition-all shadow-lg hover:shadow-xl"
               title="Back to Top"
             >
-              <ArrowUp className="w-5 h-5" />
+              <ArrowUp className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           )}
 
@@ -184,10 +184,10 @@ export default function App() {
             href="https://wa.me/918185898089?text=Hello%20Abhista%20Infra,%20I%20would%20like%20to%20know%20more%20about%20your%20ventures."
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-3 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-2 shadow-xl hover:scale-105 transition-all"
+            className="w-11 h-11 sm:w-auto p-3 sm:px-4 sm:py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all"
             title="Direct WhatsApp"
           >
-            <MessageSquare className="w-5 h-5" />
+            <MessageSquare className="w-5 h-5 shrink-0" />
             <span className="hidden sm:inline">WhatsApp Us</span>
           </a>
         </div>

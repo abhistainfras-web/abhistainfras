@@ -187,45 +187,47 @@ export default function AboutPage({ onOpenVisitModal }) {
           Milestones in Our 18-Year Journey
         </h2>
 
-        <div className="space-y-8 relative before:absolute before:inset-0 before:left-4 sm:before:left-1/2 before:w-0.5 before:bg-slate-200">
+        <div className="space-y-10 relative before:absolute before:inset-0 before:left-3 sm:before:left-1/2 before:w-0.5 before:bg-slate-200">
           {milestones.map((item, idx) => (
-            <div key={idx} className="relative flex flex-col sm:flex-row items-start sm:items-center gap-6">
-              <div className={`sm:w-1/2 ${idx % 2 === 0 ? 'sm:text-right' : 'sm:order-last'}`}>
-                <div className="inline-block px-3 py-1 rounded-md bg-[#FDB813] text-slate-950 font-bold text-xs mb-1">
+            <div key={idx} className="relative flex flex-col sm:flex-row items-start sm:items-center pl-8 sm:pl-0 sm:gap-6">
+              
+              {/* Timeline Indicator Dot */}
+              <div className="absolute left-[3px] sm:left-1/2 top-1 sm:top-1/2 -translate-x-1/2 -translate-y-0 sm:-translate-y-1/2 w-4 h-4 sm:w-6 sm:h-6 rounded-full bg-white border-4 border-[#FDB813] z-10 shadow-sm" />
+
+              <div className={`w-full sm:w-1/2 ${idx % 2 === 0 ? 'sm:text-right sm:pr-8' : 'sm:order-last sm:pl-8'}`}>
+                <div className="inline-block px-3 py-1 rounded-md bg-[#FDB813] text-slate-950 font-bold text-xs mb-1.5 shadow-sm">
                   {item.year}
                 </div>
                 <h3 className="text-base font-bold text-slate-900">{item.title}</h3>
                 <p className="text-xs text-slate-600 mt-1 leading-relaxed">{item.desc}</p>
               </div>
 
-              <div className="w-8 h-8 rounded-full bg-white border-4 border-[#FDB813] z-10 shrink-0 hidden sm:block"></div>
-
-              <div className="sm:w-1/2 hidden sm:block"></div>
+              <div className="hidden sm:block sm:w-1/2" />
             </div>
           ))}
         </div>
       </div>
 
       {/* CTA Bottom Banner */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
-          <div>
-            <h3 className="text-2xl font-bold">Experience the Abhista Standard in Person</h3>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-20 sm:mb-24">
+        <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-10 lg:p-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-xl border border-slate-800">
+          <div className="space-y-1.5 max-w-xl">
+            <h3 className="text-xl sm:text-2xl font-black text-white">Experience the Abhista Standard in Person</h3>
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
               Visit our Kakatiya Hills, Madhapur headquarters or schedule a weekend site tour.
             </p>
           </div>
 
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto shrink-0">
             <button
               onClick={() => onOpenVisitModal(null)}
-              className="px-6 py-3.5 rounded-xl bg-[#FDB813] hover:bg-[#e6a50e] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all whitespace-nowrap"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#FDB813] hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider transition-all text-center shadow-md whitespace-nowrap"
             >
               Book Site Visit
             </button>
             <Link
               to="/contact"
-              className="px-6 py-3.5 rounded-xl border border-slate-700 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider transition-all whitespace-nowrap"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-700 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider transition-all text-center whitespace-nowrap"
             >
               Contact Office
             </Link>
