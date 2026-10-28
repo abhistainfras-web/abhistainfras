@@ -82,6 +82,68 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               Home
             </NavLink>
 
+            {/* About Us Dropdown - Kept directly after Home */}
+            <div
+              className="relative py-2"
+              onMouseEnter={() => handleMouseEnter('about')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                onClick={() => toggleDropdown('about')}
+                className={`text-[13px] font-bold tracking-wider uppercase whitespace-nowrap px-3 py-1 transition-colors flex items-center gap-1 ${
+                  location.pathname === '/about' || location.pathname === '/history' || location.pathname === '/sustainability'
+                    ? 'text-[#b37a00] font-extrabold'
+                    : 'text-slate-700 hover:text-slate-950'
+                }`}
+              >
+                <span>About Us</span>
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180 text-[#FDB813]' : 'text-slate-400'}`} />
+              </button>
+
+              {activeDropdown === 'about' && (
+                <div className="absolute top-full left-0 w-72 bg-white border border-slate-200 rounded-2xl shadow-xl py-2 px-2 z-50 animate-fade-in">
+                  <NavLink
+                    to="/about"
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-amber-50 text-[#b37a00] flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
+                      <Building2 className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">About Abhista</div>
+                      <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Heritage, Leadership & Core Values</p>
+                    </div>
+                  </NavLink>
+
+                  <NavLink
+                    to="/history"
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                      <Clock className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-slate-900">Our History & Milestones</div>
+                      <p className="text-[11px] text-slate-500 leading-tight mt-0.5">From Anuradha 2006 to 2026</p>
+                    </div>
+                  </NavLink>
+
+                  <NavLink
+                    to="/sustainability"
+                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                      <Trees className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700">Sustainability</div>
+                      <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Organic farming & groundwater recharge</p>
+                    </div>
+                  </NavLink>
+                </div>
+              )}
+            </div>
+
             {/* Projects Dropdown */}
             <div
               className="relative py-2"
@@ -149,68 +211,6 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               Corridors
             </NavLink>
 
-            {/* About Us Dropdown */}
-            <div
-              className="relative py-2"
-              onMouseEnter={() => handleMouseEnter('about')}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                onClick={() => toggleDropdown('about')}
-                className={`text-[13px] font-bold tracking-wider uppercase whitespace-nowrap px-3 py-1 transition-colors flex items-center gap-1 ${
-                  location.pathname === '/about' || location.pathname === '/history' || location.pathname === '/sustainability'
-                    ? 'text-[#b37a00] font-extrabold'
-                    : 'text-slate-700 hover:text-slate-950'
-                }`}
-              >
-                <span>About Us</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180 text-[#FDB813]' : 'text-slate-400'}`} />
-              </button>
-
-              {activeDropdown === 'about' && (
-                <div className="absolute top-full left-0 w-72 bg-white border border-slate-200 rounded-2xl shadow-xl py-2 px-2 z-50 animate-fade-in">
-                  <NavLink
-                    to="/about"
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 text-[#b37a00] flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
-                      <Building2 className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">About Abhista</div>
-                      <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Heritage, Leadership & Core Values</p>
-                    </div>
-                  </NavLink>
-
-                  <NavLink
-                    to="/history"
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-slate-900 group-hover:text-white transition-colors">
-                      <Clock className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-slate-900">Our History & Milestones</div>
-                      <p className="text-[11px] text-slate-500 leading-tight mt-0.5">From Anuradha 2006 to 2026</p>
-                    </div>
-                  </NavLink>
-
-                  <NavLink
-                    to="/sustainability"
-                    className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
-                      <Trees className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700">Sustainability</div>
-                      <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Organic farming & groundwater recharge</p>
-                    </div>
-                  </NavLink>
-                </div>
-              )}
-            </div>
-
             {/* Company Dropdown */}
             <div
               className="relative py-2"
@@ -273,7 +273,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               )}
             </div>
 
-            {/* Interactive Studio — special pill, positioned after Company */}
+            {/* Interactive Studio — special pill */}
             <NavLink
               to="/interactive-studio"
               className={({ isActive }) =>
@@ -379,10 +379,35 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               Home
             </NavLink>
 
+            {/* About & Heritage - Directly after Home */}
+            <div className="pt-1">
+              <span className="text-[11px] font-black uppercase tracking-wider text-slate-400 block mb-1.5 px-2">About Us & Heritage</span>
+              <div className="space-y-0.5 pl-3 border-l-2 border-[#FDB813]/60">
+                <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
+                  About Abhista & Leadership
+                </NavLink>
+                <NavLink to="/history" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
+                  Our History & Achievements (2006 – 2026)
+                </NavLink>
+                <NavLink to="/sustainability" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
+                  Sustainability & Agroecology
+                </NavLink>
+                <NavLink to="/investor-relations" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
+                  Investor Relations & Legal Standard
+                </NavLink>
+                <NavLink to="/calculator" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
+                  Farmland & Land ROI Calculator
+                </NavLink>
+                <NavLink to="/careers" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
+                  Careers & In-House Technical Cadre
+                </NavLink>
+              </div>
+            </div>
+
             {/* Projects */}
             <div className="pt-1">
               <span className="text-[11px] font-black uppercase tracking-wider text-slate-400 block mb-1.5 px-2">Projects Portfolio</span>
-              <div className="space-y-0.5 pl-3 border-l-2 border-[#FDB813]/50">
+              <div className="space-y-0.5 pl-3 border-l-2 border-slate-300">
                 <NavLink to="/projects" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
                   All 11 Flagship Ventures
                 </NavLink>
@@ -404,31 +429,6 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               <MapPin className="w-4 h-4 text-slate-400" />
               Growth Corridors (ORR, NH-44 & RRR)
             </NavLink>
-
-            {/* About & Heritage */}
-            <div className="pt-1">
-              <span className="text-[11px] font-black uppercase tracking-wider text-slate-400 block mb-1.5 px-2">About & Heritage</span>
-              <div className="space-y-0.5 pl-3 border-l-2 border-slate-300">
-                <NavLink to="/about" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
-                  About Abhista & Leadership
-                </NavLink>
-                <NavLink to="/history" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
-                  Our History & Achievements (2006 – 2026)
-                </NavLink>
-                <NavLink to="/sustainability" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
-                  Sustainability & Agroecology
-                </NavLink>
-                <NavLink to="/investor-relations" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
-                  Investor Relations & Legal Standard
-                </NavLink>
-                <NavLink to="/calculator" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
-                  Farmland & Land ROI Calculator
-                </NavLink>
-                <NavLink to="/careers" onClick={() => setMobileMenuOpen(false)} className={({ isActive }) => `flex items-center min-h-[40px] py-1.5 px-2 text-xs font-semibold rounded-lg transition-colors ${isActive ? 'text-[#b37a00]' : 'text-slate-700 hover:text-[#b37a00]'}`}>
-                  Careers & In-House Technical Cadre
-                </NavLink>
-              </div>
-            </div>
 
             {/* Interactive Studio */}
             <NavLink
