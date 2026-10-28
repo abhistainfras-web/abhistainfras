@@ -338,7 +338,7 @@ export default function ProjectDetailPage({ onOpenVisitModal }) {
                   )}
 
                   <a
-                    href={`https://wa.me/918185898089?text=Hello%20Abhista,%20I%20am%20interested%20in%20${encodeURIComponent(property.title)}.`}
+                    href={`https://wa.me/917075528334?text=Hello%20Abhista,%20I%20am%20interested%20in%20${encodeURIComponent(property.title)}.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-2.5 rounded-xl border border-emerald-600/40 hover:bg-emerald-950 text-emerald-400 font-semibold text-xs tracking-wide flex items-center justify-center gap-2 transition-colors"
@@ -349,7 +349,7 @@ export default function ProjectDetailPage({ onOpenVisitModal }) {
                 </div>
 
                 <div className="border-t border-slate-800 pt-4 text-[11px] text-slate-400 text-center">
-                  Direct Coordinator: <a href="tel:+918185898089" className="text-white font-bold hover:underline">+91 818 5898 089</a>
+                  Direct Coordinator: <a href="tel:+917075528334" className="text-white font-bold hover:underline">+91 70755 28334</a>
                 </div>
               </div>
 

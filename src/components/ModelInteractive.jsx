@@ -55,9 +55,9 @@ export default function ModelInteractive({ currency, onSelectProperty, onOpenVie
               Live Plot Picker
             </a>
             <a href="#portfolio-grid" className="hover:text-cyan-400 transition-colors">Ventures</a>
-            <a href="tel:+918185898089" className="text-cyan-400 font-bold flex items-center gap-1">
+            <a href="tel:+917075528334" className="text-cyan-400 font-bold flex items-center gap-1">
               <Phone className="w-3.5 h-3.5" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
           </div>
 
@@ -331,7 +331,7 @@ export default function ModelInteractive({ currency, onSelectProperty, onOpenVie
             <strong className="text-white">ABHISTA INFRA'S (EST. 2016)</strong> — Madhapur Corporate HQ, Hyderabad
           </div>
           <div className="flex gap-4">
-            <a href="tel:+918185898089" className="text-cyan-400">+91 818 5898 089</a>
+            <a href="tel:+917075528334" className="text-cyan-400">+91 70755 28334</a>
             <a href="mailto:info@abhista.in" className="text-cyan-400">info@abhista.in</a>
           </div>
         </div>

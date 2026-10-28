@@ -43,9 +43,9 @@ export default function ModelAzure({ currency, onSelectProperty, onOpenViewingMo
             <a href="#azure-ventures" className="hover:text-sky-600 transition-colors">Resort Estates</a>
             <a href="#azure-calculator" className="hover:text-sky-600 transition-colors">EMI Simulator</a>
             <a href="#azure-lifestyle" className="hover:text-sky-600 transition-colors">Resort Lifestyle</a>
-            <a href="tel:+918185898089" className="text-sky-600 font-bold flex items-center gap-1.5">
+            <a href="tel:+917075528334" className="text-sky-600 font-bold flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
           </div>
 
@@ -274,7 +274,7 @@ export default function ModelAzure({ currency, onSelectProperty, onOpenViewingMo
             <span className="text-[11px] text-slate-400">Madhapur Corporate HQ, Hyderabad - 500081</span>
           </div>
           <div className="flex gap-6">
-            <a href="tel:+918185898089" className="text-sky-400 font-semibold">+91 818 5898 089</a>
+            <a href="tel:+917075528334" className="text-sky-400 font-semibold">+91 70755 28334</a>
             <a href="mailto:info@abhista.in" className="text-sky-400 font-semibold">info@abhista.in</a>
           </div>
         </div>

@@ -92,9 +92,9 @@ export default function Footer({ onOpenViewingModal }) {
           </div>
 
           <div className="flex flex-wrap items-center gap-6 text-xs text-slate-300">
-            <a href="tel:+918185898089" className="hover:text-gold-300 flex items-center gap-1.5">
+            <a href="tel:+917075528334" className="hover:text-gold-300 flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-gold-400" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
             <a href="mailto:info@abhista.in" className="hover:text-gold-300 flex items-center gap-1.5">
               <Mail className="w-3.5 h-3.5 text-gold-400" />

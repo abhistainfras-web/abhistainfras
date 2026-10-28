@@ -37,9 +37,9 @@ export default function ModelHeritage({ currency, onSelectProperty, onOpenViewin
             <a href="#heritage-hero" className="hover:text-[#d4af37] transition-colors">Imperial Dynasty</a>
             <a href="#timeline-section" className="hover:text-[#d4af37] transition-colors">20-Year Legacy</a>
             <a href="#heritage-collection" className="hover:text-[#d4af37] transition-colors">Royal Portfolios</a>
-            <a href="tel:+918185898089" className="text-[#d4af37] font-semibold flex items-center gap-1.5">
+            <a href="tel:+917075528334" className="text-[#d4af37] font-semibold flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
           </div>
 

@@ -76,12 +76,9 @@ export default function ContactPage({ onOpenVisitModal }) {
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
-                    <strong className="text-slate-900 block text-xs font-bold mb-0.5">Direct Developer Lines</strong>
-                    <a href={`tel:${COMPANY_INFO.phone}`} className="text-slate-900 hover:text-amber-600 font-bold block">
+                    <strong className="text-slate-900 block text-xs font-bold mb-0.5">Direct Developer Line</strong>
+                    <a href={`tel:${COMPANY_INFO.phone}`} className="text-slate-900 hover:text-amber-600 font-bold block text-sm">
                       {COMPANY_INFO.phone}
-                    </a>
-                    <a href="tel:+919100999923" className="text-slate-900 hover:text-amber-600 font-bold block">
-                      +91 910 0999 923
                     </a>
                   </div>
                 </div>
@@ -112,7 +109,7 @@ export default function ContactPage({ onOpenVisitModal }) {
 
               <div className="pt-2">
                 <a
-                  href="https://wa.me/918185898089?text=Hello%20Abhista%20Infra,%20I%20would%20like%20to%20connect%20with%20your%20team."
+                  href="https://wa.me/917075528334?text=Hello%20Abhista%20Infra,%20I%20would%20like%20to%20connect%20with%20your%20team."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-sm"

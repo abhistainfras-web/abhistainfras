@@ -140,10 +140,10 @@ export default function BrandLocations({ onSelectCorridor }) {
           </div>
 
           <a
-            href="tel:+918185898089"
+            href="tel:+917075528334"
             className="px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs tracking-wider uppercase whitespace-nowrap transition-colors"
           >
-            Speak with Land Advisor
+            Speak with Land Advisor (+91 70755 28334)
           </a>
         </div>
 

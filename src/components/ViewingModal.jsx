@@ -173,7 +173,7 @@ export default function ViewingModal({
               </div>
 
               <div className="text-center text-[10px] text-slate-400">
-                Direct coordinator assistance from Madhapur Head Office: <a href="tel:+918185898089" className="text-emerald-700 font-semibold">+91 818 5898 089</a>
+                Direct coordinator assistance from Madhapur Head Office: <a href="tel:+917075528334" className="text-emerald-700 font-semibold">+91 70755 28334</a>
               </div>
 
             </form>
@@ -200,7 +200,7 @@ export default function ViewingModal({
 
             <div className="pt-2 flex flex-col sm:flex-row gap-3">
               <a
-                href={`https://wa.me/918185898089?text=Hello%20Abhista,%20I%20have%20scheduled%20a%20site%20visit%20for%20${encodeURIComponent(selectedVenture)}.`}
+                href={`https://wa.me/917075528334?text=Hello%20Abhista,%20I%20have%20scheduled%20a%20site%20visit%20for%20${encodeURIComponent(selectedVenture)}.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-2.5 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-semibold text-xs tracking-wider uppercase transition-colors text-center"

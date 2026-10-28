@@ -62,11 +62,11 @@ export default function InteractiveStudioPage({ onOpenVisitModal }) {
               Book Complimentary Site Visit
             </button>
             <a
-              href="tel:+918185898089"
+              href="tel:+917075528334"
               className="px-8 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider transition-all border border-slate-700 flex items-center gap-2"
             >
               <Phone className="w-4 h-4 text-[#FDB813]" />
-              <span>Call +91 818 5898 089</span>
+              <span>Call +91 70755 28334</span>
             </a>
           </div>
         </div>

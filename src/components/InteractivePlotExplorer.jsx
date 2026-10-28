@@ -400,11 +400,11 @@ export default function InteractivePlotExplorer({ onOpenVisitModal }) {
               </button>
 
               <a
-                href="tel:+918185898089"
+                href="tel:+917075528334"
                 className="w-full py-3 px-6 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2"
               >
                 <Phone className="w-4 h-4 text-[#d99600]" />
-                <span>Call Expert: +91 818 5898 089</span>
+                <span>Call Expert: +91 70755 28334</span>
               </a>
             </div>
 

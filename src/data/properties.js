@@ -14,8 +14,7 @@ export const COMPANY_INFO = {
   heritageYear: 2006,
   anuradhaYear: "Founded Anuradha Properties in 2006",
   teamSize: "Over 80 Dedicated Specialists & In-House Training Academy",
-  phone: "+91 818 5898 089",
-  phoneAlt: "+91 910 0999 923",
+  phone: "+91 70755 28334",
   email: "info@abhista.in",
   address: "#Plot No - 109, Street No - 3, Kakatiya Hills, Madhapur, Hyderabad, 500081, Telangana, India",
   hours: "Monday – Saturday: 9:30 AM – 7:00 PM (Sunday Site Visits Open by Appointment)",
@@ -25,7 +24,7 @@ export const COMPANY_INFO = {
     facebook: "https://www.facebook.com/AbhistaProperties",
     instagram: "https://www.instagram.com/abhista.in_realestate/",
     linkedin: "https://www.linkedin.com/company/abhista/",
-    whatsapp: "https://wa.me/918185898089"
+    whatsapp: "https://wa.me/917075528334"
   }
 };
 

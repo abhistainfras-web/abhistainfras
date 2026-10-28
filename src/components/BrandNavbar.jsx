@@ -298,9 +298,9 @@ export default function BrandNavbar({ onOpenVisitModal }) {
           {/* 3. Right Action Area */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
             <a
-              href="tel:+918185898089"
+              href="tel:+917075528334"
               className="w-9 h-9 rounded-full bg-slate-100 hover:bg-amber-100/80 text-slate-800 hover:text-[#b37a00] flex items-center justify-center transition-colors border border-slate-200"
-              title="Call Madhapur HQ: +91 818 5898 089"
+              title="Call Madhapur HQ: +91 70755 28334"
             >
               <Phone className="w-4 h-4" />
             </a>
@@ -317,10 +317,10 @@ export default function BrandNavbar({ onOpenVisitModal }) {
           {/* 4. Mobile Action & Menu Toggle */}
           <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
             <a
-              href="tel:+918185898089"
+              href="tel:+917075528334"
               className="w-9 h-9 rounded-xl bg-slate-100 hover:bg-amber-100/80 text-slate-800 hover:text-[#b37a00] flex items-center justify-center transition-colors border border-slate-200"
-              aria-label="Call Madhapur HQ"
-              title="Call Madhapur HQ"
+              aria-label="Call Madhapur HQ: +91 70755 28334"
+              title="Call Madhapur HQ: +91 70755 28334"
             >
               <Phone className="w-4 h-4 text-[#FDB813]" />
             </a>
@@ -352,8 +352,8 @@ export default function BrandNavbar({ onOpenVisitModal }) {
           <div className="p-3.5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white flex items-center justify-between border border-slate-800 shadow-md">
             <div>
               <span className="text-[10px] uppercase font-bold text-[#FDB813] block tracking-wider">Kakatiya Hills, Madhapur</span>
-              <a href="tel:+918185898089" className="text-xs font-black text-white hover:underline mt-0.5 block tracking-wide">
-                +91 818 5898 089
+              <a href="tel:+917075528334" className="text-xs font-black text-white hover:underline mt-0.5 block tracking-wide">
+                +91 70755 28334
               </a>
             </div>
             <button

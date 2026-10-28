@@ -150,10 +150,10 @@ export default function InvestorRelationsPage({ onOpenVisitModal }) {
 
           <div className="flex items-center gap-4">
             <a
-              href="tel:+918185898089"
+              href="tel:+917075528334"
               className="px-5 py-3 rounded-xl bg-slate-900 text-white font-bold text-xs uppercase tracking-wider hover:bg-slate-800 transition-colors"
             >
-              Call +91 818 5898 089
+              Call +91 70755 28334
             </a>
             <Link
               to="/contact"

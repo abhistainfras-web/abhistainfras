@@ -141,9 +141,9 @@ export default function ModelCinema({ currency, onSelectProperty, onOpenViewingM
 
             <a href="#cinema-showcase" className="hover:text-gold-300 transition-colors">Showcase</a>
             <a href="#backward-integration" className="hover:text-gold-300 transition-colors">Integration</a>
-            <a href="tel:+918185898089" className="text-gold-400 font-semibold flex items-center gap-1.5">
+            <a href="tel:+917075528334" className="text-gold-400 font-semibold flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
           </nav>
 
@@ -400,7 +400,7 @@ export default function ModelCinema({ currency, onSelectProperty, onOpenViewingM
           </div>
 
           <div className="flex gap-6 text-slate-300">
-            <a href="tel:+918185898089" className="hover:text-gold-300">+91 818 5898 089</a>
+            <a href="tel:+917075528334" className="hover:text-gold-300">+91 70755 28334</a>
             <a href="mailto:info@abhista.in" className="hover:text-gold-300">info@abhista.in</a>
           </div>
 

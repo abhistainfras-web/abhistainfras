@@ -65,9 +65,9 @@ export default function Navbar({
               About Abhista
               <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gold-400 transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="tel:+918185898089" className="text-gold-400 hover:text-gold-200 transition-colors py-1 flex items-center gap-1.5 font-semibold">
+            <a href="tel:+917075528334" className="text-gold-400 hover:text-gold-200 transition-colors py-1 flex items-center gap-1.5 font-semibold">
               <Phone className="w-3.5 h-3.5 text-gold-400" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
           </nav>
 
@@ -189,11 +189,11 @@ export default function Navbar({
               About Abhista
             </a>
             <a 
-              href="tel:+918185898089" 
+              href="tel:+917075528334" 
               className="text-gold-400 hover:text-gold-200 py-1 flex items-center gap-2"
             >
               <Phone className="w-4 h-4" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
           </nav>
           

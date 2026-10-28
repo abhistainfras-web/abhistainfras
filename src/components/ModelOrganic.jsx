@@ -36,9 +36,9 @@ export default function ModelOrganic({ currency, onSelectProperty, onOpenViewing
             <a href="#atelier-portfolio" className="hover:text-[#8c734b] transition-colors">Portfolios</a>
             <a href="#nature-philosophy" className="hover:text-[#8c734b] transition-colors">Sattva Philosophy</a>
             <a href="#backward-integration" className="hover:text-[#8c734b] transition-colors">Integration</a>
-            <a href="tel:+918185898089" className="text-[#8c734b] font-semibold flex items-center gap-1.5">
+            <a href="tel:+917075528334" className="text-[#8c734b] font-semibold flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5" />
-              +91 818 5898 089
+              +91 70755 28334
             </a>
           </div>
 
@@ -319,7 +319,7 @@ export default function ModelOrganic({ currency, onSelectProperty, onOpenViewing
           </div>
 
           <div className="flex items-center gap-6 text-slate-300">
-            <a href="tel:+918185898089" className="hover:text-[#dec277]">+91 818 5898 089</a>
+            <a href="tel:+917075528334" className="hover:text-[#dec277]">+91 70755 28334</a>
             <a href="mailto:info@abhista.in" className="hover:text-[#dec277]">info@abhista.in</a>
           </div>
 

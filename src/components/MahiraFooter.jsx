@@ -82,9 +82,9 @@ export default function MahiraFooter({ onOpenViewingModal }) {
           <div className="space-y-3">
             <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-[#e8c87a] block">Quick Contact</span>
             <div className="space-y-2 text-xs font-light">
-              <a href="tel:+918185898089" className="hover:text-[#e8c87a] flex items-center gap-2">
+              <a href="tel:+917075528334" className="hover:text-[#e8c87a] flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#e8c87a]" />
-                <span>+91 818 5898 089</span>
+                <span>+91 70755 28334</span>
               </a>
               <a href="mailto:info@abhista.in" className="hover:text-[#e8c87a] flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#e8c87a]" />

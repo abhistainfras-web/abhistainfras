@@ -99,7 +99,7 @@ export default function BrandFooter({ onOpenVisitModal }) {
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#FDB813] shrink-0" />
                 <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-[#FDB813] transition-colors font-semibold">
-                  {COMPANY_INFO.phone} / +91 910 0999 923
+                  {COMPANY_INFO.phone}
                 </a>
               </div>
 
@@ -186,7 +186,7 @@ export default function BrandFooter({ onOpenVisitModal }) {
             </button>
 
             <a
-              href="https://wa.me/918185898089?text=Hello%20Abhista%20Infra,%20I%20am%20interested%20in%20your%20ventures."
+              href="https://wa.me/917075528334?text=Hello%20Abhista%20Infra,%20I%20am%20interested%20in%20your%20ventures."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-2.5 rounded-xl border border-emerald-700/60 hover:bg-emerald-950 text-emerald-400 font-semibold text-xs tracking-wide flex items-center justify-center gap-2 transition-colors"

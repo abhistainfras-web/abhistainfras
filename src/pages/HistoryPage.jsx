@@ -443,10 +443,10 @@ export default function HistoryPage({ onOpenVisitModal }) {
               <span>Book Free Site Visit</span>
             </button>
             <a
-              href="tel:+918185898089"
+              href="tel:+917075528334"
               className="px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs uppercase tracking-wider transition-colors border border-slate-700"
             >
-              Call +91 818 5898 089
+              Call +91 70755 28334
             </a>
           </div>
         </div>

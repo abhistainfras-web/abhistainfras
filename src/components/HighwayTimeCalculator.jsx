@@ -467,8 +467,8 @@ export default function HighwayTimeCalculator({ onOpenVisitModal }) {
           <span>
             Abhista provides chauffeured luxury AC cab pick-up and drop from your doorstep for all family site visits.
           </span>
-          <a href="tel:+918185898089" className="text-[#FDB813] font-bold hover:underline">
-            Call +91 818 5898 089 to Book
+          <a href="tel:+917075528334" className="text-[#FDB813] font-bold hover:underline">
+            Call +91 70755 28334 to Book
           </a>
         </div>
 

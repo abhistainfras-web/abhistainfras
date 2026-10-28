@@ -181,7 +181,7 @@ export default function App() {
           )}
 
           <a
-            href="https://wa.me/918185898089?text=Hello%20Abhista%20Infra,%20I%20would%20like%20to%20know%20more%20about%20your%20ventures."
+            href="https://wa.me/917075528334?text=Hello%20Abhista%20Infra,%20I%20would%20like%20to%20know%20more%20about%20your%20ventures."
             target="_blank"
             rel="noopener noreferrer"
             className="w-11 h-11 sm:w-auto p-3 sm:px-4 sm:py-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-xl hover:scale-105 transition-all"
