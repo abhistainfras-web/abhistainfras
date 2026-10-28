@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Trees, TrendingUp, Sparkles, ShieldCheck, CheckCircle2, DollarSign, ArrowRight, Leaf, FileText } from 'lucide-react';
+import { Trees, TrendingUp, ShieldCheck, CheckCircle2, DollarSign, ArrowRight, Leaf, FileText } from 'lucide-react';
 
 const PLANTATION_MODELS = [
   {

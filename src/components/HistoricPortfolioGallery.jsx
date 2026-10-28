@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { HYDERABAD_HISTORIC_PROJECTS, BENGALURU_COMPLETED_PROJECTS } from '../data/properties';
-import { Building2, MapPin, ShieldCheck, CheckCircle2, Award, Calendar, Sparkles, FileText, Eye, Layers, Filter, Maximize2, X } from 'lucide-react';
+import { Building2, MapPin, ShieldCheck, CheckCircle2, Award, Calendar, FileText, Eye, Layers, Filter, Maximize2, X } from 'lucide-react';
 
 export default function HistoricPortfolioGallery() {
   const [activeState, setActiveState] = useState('hyderabad'); // 'hyderabad' or 'bengaluru'
@@ -73,7 +73,7 @@ export default function HistoricPortfolioGallery() {
                   : 'text-slate-600 hover:text-slate-950'
               }`}
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#FDB813]" />
+              <Layers className="w-3.5 h-3.5 text-[#FDB813]" />
               <span>Interactive Gallery</span>
             </button>
 

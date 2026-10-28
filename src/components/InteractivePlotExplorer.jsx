@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Compass, CheckCircle2, MapPin, Eye, Info, Sparkles, Filter, Phone, Calendar, ArrowRight } from 'lucide-react';
+import { Compass, CheckCircle2, MapPin, Eye, Info, Trees, Filter, Phone, Calendar, ArrowRight } from 'lucide-react';
 
 // Authentic Plot Layout Simulation for Abhista Flagship Ventures
 const VENTURE_LAYOUTS = {
@@ -283,7 +283,7 @@ export default function InteractivePlotExplorer({ onOpenVisitModal }) {
 
               {/* Central Green Buffer & Amenity Spine */}
               <div className="bg-emerald-950/40 border border-emerald-800/40 rounded-xl p-3 text-center text-xs text-emerald-300 flex items-center justify-center gap-2">
-                <Sparkles className="w-4 h-4 text-emerald-400" />
+                <Trees className="w-4 h-4 text-emerald-400" />
                 <span>Central Green Park • Organic Avenue Plantation • Underground Drip Network</span>
               </div>
 
@@ -360,7 +360,7 @@ export default function InteractivePlotExplorer({ onOpenVisitModal }) {
               {/* Vaastu Energy Analysis */}
               <div className="p-4 rounded-2xl bg-amber-50/70 border border-amber-200/80">
                 <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900 mb-1">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                  <Compass className="w-3.5 h-3.5 text-amber-700" />
                   <span>Vaastu Energy Alignment</span>
                 </div>
                 <p className="text-xs text-amber-950 font-medium leading-relaxed">

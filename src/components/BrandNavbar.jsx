@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Phone, ChevronDown, Calendar, Sparkles, Building2, Trees, ShieldCheck, Calculator, Users, Clock, Menu, X, TrendingUp, MapPin } from 'lucide-react';
+import { Phone, ChevronDown, Calendar, Building2, Trees, ShieldCheck, Calculator, Users, Clock, Menu, X, TrendingUp, MapPin, SlidersHorizontal } from 'lucide-react';
 
 export default function BrandNavbar({ onOpenVisitModal }) {
   const [scrolled, setScrolled] = useState(false);
@@ -106,7 +106,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/about"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 text-[#b37a00] flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <Building2 className="w-4 h-4" />
                     </div>
                     <div>
@@ -119,11 +119,11 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/history"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-slate-900">Our History & Milestones</div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">Our History & Milestones</div>
                       <p className="text-[11px] text-slate-500 leading-tight mt-0.5">From Anuradha 2006 to 2026</p>
                     </div>
                   </NavLink>
@@ -132,11 +132,11 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/sustainability"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <Trees className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700">Sustainability</div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">Sustainability</div>
                       <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Organic farming & groundwater recharge</p>
                     </div>
                   </NavLink>
@@ -168,7 +168,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/projects"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 text-[#b37a00] flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <Building2 className="w-4 h-4" />
                     </div>
                     <div>
@@ -181,11 +181,11 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/ongoing-projects"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <Trees className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700">Ongoing Projects</div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">Ongoing Projects</div>
                       <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Arrjava, Orchid Bloom, Oak Tree, Mirai</p>
                     </div>
                   </NavLink>
@@ -194,11 +194,11 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/completed-projects"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <ShieldCheck className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-slate-900">Completed Benchmarks</div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">Completed Benchmarks</div>
                       <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Delivered landmarks in Hyd & Bengaluru</p>
                     </div>
                   </NavLink>
@@ -235,7 +235,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/investor-relations"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-amber-50 text-[#b37a00] flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <TrendingUp className="w-4 h-4" />
                     </div>
                     <div>
@@ -248,11 +248,11 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/calculator"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <Calculator className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-emerald-700">ROI Calculator</div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">ROI Calculator</div>
                       <p className="text-[11px] text-slate-500 leading-tight mt-0.5">Simulate land compounding & Sec 10(1)</p>
                     </div>
                   </NavLink>
@@ -261,11 +261,11 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                     to="/careers"
                     className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-slate-50 transition-colors group"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-slate-900 group-hover:text-white transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center shrink-0 group-hover:bg-[#FDB813] group-hover:text-slate-950 transition-colors">
                       <Users className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900 group-hover:text-slate-900">Careers (80+ Cadre)</div>
+                      <div className="text-xs font-bold text-slate-900 group-hover:text-[#b37a00]">Careers (80+ Cadre)</div>
                       <p className="text-[11px] text-slate-500 leading-tight mt-0.5">In-house training academy & job roles</p>
                     </div>
                   </NavLink>
@@ -273,7 +273,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               )}
             </div>
 
-            {/* Interactive Studio — special pill */}
+            {/* Studio Navigation Item */}
             <NavLink
               to="/interactive-studio"
               className={({ isActive }) =>
@@ -284,9 +284,8 @@ export default function BrandNavbar({ onOpenVisitModal }) {
                 }`
               }
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#b37a00]" />
+              <SlidersHorizontal className="w-3.5 h-3.5 text-[#b37a00]" />
               <span>Studio</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse ml-0.5" />
             </NavLink>
 
             {/* Contact */}
@@ -308,7 +307,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
 
             <button
               onClick={() => onOpenVisitModal && onOpenVisitModal(null)}
-              className="px-5 py-2.5 rounded-xl bg-[#FDB813] hover:bg-amber-400 text-slate-950 font-extrabold text-xs uppercase tracking-wider transition-all shadow-sm hover:shadow animate-pulse-gold whitespace-nowrap flex items-center gap-2"
+              className="px-5 py-2.5 rounded-xl bg-[#FDB813] hover:bg-amber-400 text-slate-950 font-extrabold text-xs uppercase tracking-wider transition-all shadow-sm hover:shadow whitespace-nowrap flex items-center gap-2"
             >
               <Calendar className="w-3.5 h-3.5 text-slate-950" />
               <span>Book Site Visit</span>
@@ -434,13 +433,10 @@ export default function BrandNavbar({ onOpenVisitModal }) {
             <NavLink
               to="/interactive-studio"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between p-3 rounded-xl bg-amber-500/10 border border-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider min-h-[44px]"
+              className={({ isActive }) => `flex items-center gap-2 min-h-[44px] text-sm font-bold px-3 py-2 rounded-xl transition-colors ${isActive ? 'text-[#b37a00] bg-amber-50' : 'text-slate-900 hover:bg-slate-50'}`}
             >
-              <div className="flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#b37a00]" />
-                <span>Interactive Studio</span>
-              </div>
-              <span className="px-2 py-0.5 rounded-full bg-[#FDB813] text-slate-950 text-[10px] font-black">6 Tools</span>
+              <SlidersHorizontal className="w-4 h-4 text-slate-400" />
+              <span>Interactive Discovery Studio</span>
             </NavLink>
 
             {/* Contact */}

@@ -9,7 +9,7 @@ export default function BrandStory() {
         
         {/* Section Header */}
         <div className="max-w-3xl mb-16 animate-fade-in-up">
-          <span className="text-emerald-800 text-xs font-bold tracking-widest uppercase bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
+          <span className="text-[#b37a00] text-xs font-bold tracking-widest uppercase bg-amber-500/10 border border-amber-500/20 px-3.5 py-1.5 rounded-full">
             Our Heritage & Values
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold text-slate-900 tracking-tight mt-4 mb-4">
@@ -75,8 +75,8 @@ export default function BrandStory() {
           {/* Right Column: Backward Integration USP */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-[#FDB813]/40 transition-all card-hover">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
-                <ShieldCheck className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-4 border border-slate-200/80">
+                <ShieldCheck className="w-5 h-5 text-slate-800" />
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Company-Owned Machinery</h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -85,8 +85,8 @@ export default function BrandStory() {
             </div>
 
             <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-[#FDB813]/40 transition-all card-hover">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
-                <Users className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-4 border border-slate-200/80">
+                <Users className="w-5 h-5 text-slate-800" />
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">In-House Civil & Legal Cadre</h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -95,8 +95,8 @@ export default function BrandStory() {
             </div>
 
             <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-[#FDB813]/40 transition-all card-hover">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
-                <HeartHandshake className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center mb-4 border border-slate-200/80">
+                <HeartHandshake className="w-5 h-5 text-slate-800" />
               </div>
               <h4 className="text-base font-bold text-slate-900 mb-2">Lifelong Asset Management</h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -108,22 +108,22 @@ export default function BrandStory() {
         </div>
 
         {/* 4 Quantitative Milestones */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white border border-emerald-900/50 shadow-xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 sm:p-10 rounded-2xl bg-slate-950 text-white border border-slate-800 shadow-xl">
           <div>
-            <div className="text-3xl sm:text-4xl font-bold text-emerald-400">18+</div>
-            <div className="text-xs sm:text-sm text-slate-300 font-medium mt-1">Years of Operational Excellence</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">18+</div>
+            <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Years of Operational Excellence</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-bold text-emerald-400">1,200+</div>
-            <div className="text-xs sm:text-sm text-slate-300 font-medium mt-1">Acres Master-Planned</div>
+            <div className="text-3xl sm:text-4xl font-black text-[#FDB813]">1,200+</div>
+            <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Acres Master-Planned</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-bold text-emerald-400">25+</div>
-            <div className="text-xs sm:text-sm text-slate-300 font-medium mt-1">Delivered Gated Ventures</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">25+</div>
+            <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Delivered Gated Ventures</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-bold text-emerald-400">100%</div>
-            <div className="text-xs sm:text-sm text-slate-300 font-medium mt-1">Clean Title Clearances</div>
+            <div className="text-3xl sm:text-4xl font-black text-[#FDB813]">100%</div>
+            <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Clean Title Clearances</div>
           </div>
         </div>
 

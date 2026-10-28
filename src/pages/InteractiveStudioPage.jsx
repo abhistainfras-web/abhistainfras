@@ -1,6 +1,6 @@
 import React from 'react';
 import InteractiveStudio from '../components/InteractiveStudio';
-import { Compass, Sparkles, MapPin, Phone, ShieldCheck } from 'lucide-react';
+import { Compass, MapPin, Phone, ShieldCheck } from 'lucide-react';
 
 export default function InteractiveStudioPage({ onOpenVisitModal }) {
   return (
@@ -12,7 +12,7 @@ export default function InteractiveStudioPage({ onOpenVisitModal }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FDB813]/10 border border-[#FDB813]/30 text-[#FDB813] text-xs font-bold uppercase tracking-wider mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Compass className="w-3.5 h-3.5" />
             <span>Interactive Experience Suite</span>
           </div>
 

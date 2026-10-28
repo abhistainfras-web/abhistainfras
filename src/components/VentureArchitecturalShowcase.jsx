@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PROPERTIES } from '../data/properties';
 import { formatCurrencyValue } from './PropertyCard';
-import { MapPin, Trees, Building2, ArrowRight, Download, Eye, ShieldCheck, CheckCircle2, Calendar, Compass, Sparkles, Filter } from 'lucide-react';
+import { MapPin, Trees, Building2, ArrowRight, Download, Eye, ShieldCheck, CheckCircle2, Calendar, Compass, Filter } from 'lucide-react';
 
 export default function VentureArchitecturalShowcase({ onSelectProperty, onOpenVisitModal }) {
   const [activeCategory, setActiveCategory] = useState('all');

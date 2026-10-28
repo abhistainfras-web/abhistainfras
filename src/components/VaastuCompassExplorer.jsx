@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Compass, Sparkles, Sun, ShieldCheck, CheckCircle2, ArrowRight, BookOpen, AlertCircle } from 'lucide-react';
+import { Compass, Sun, ShieldCheck, CheckCircle2, ArrowRight, BookOpen, AlertCircle } from 'lucide-react';
 
 const VAASTU_DIRECTIONS = [
   {
@@ -390,7 +390,7 @@ export default function VaastuCompassExplorer({ onOpenVisitModal }) {
               {/* Abhista Infra's Execution Guarantee */}
               <div className="p-4 rounded-2xl bg-slate-900 text-white space-y-1.5">
                 <div className="flex items-center gap-2 text-xs font-bold text-[#FDB813] uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5" />
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#FDB813]" />
                   <span>The Abhista Layout Guarantee</span>
                 </div>
                 <p className="text-xs text-slate-300 leading-relaxed">

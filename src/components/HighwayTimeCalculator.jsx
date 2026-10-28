@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navigation, Clock, MapPin, Car, ShieldCheck, ArrowRight, CheckCircle2, Sparkles, Phone } from 'lucide-react';
+import { Navigation, Clock, MapPin, Car, ShieldCheck, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
 
 const ORIGINS = [
   { id: 'financial-district', name: 'Gachibowli / Financial District', note: 'Wipro Circle, WaveRock, Neopolis SEZ' },

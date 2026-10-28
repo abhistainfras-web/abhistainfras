@@ -24,9 +24,9 @@ export default function BrandFooter({ onOpenVisitModal }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Quick Inquiry Callout Bar */}
-        <div className="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 border border-emerald-800/50 rounded-2xl p-8 mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
+        <div className="bg-slate-950 border border-slate-800 rounded-2xl p-8 mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
           <div className="lg:col-span-6 space-y-2">
-            <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">
+            <span className="text-[#FDB813] text-xs font-bold uppercase tracking-widest">
               Direct Developer Desk
             </span>
             <h3 className="text-2xl font-bold text-white tracking-tight">
@@ -39,8 +39,8 @@ export default function BrandFooter({ onOpenVisitModal }) {
 
           <div className="lg:col-span-6">
             {submitted ? (
-              <div className="p-4 rounded-xl bg-emerald-900/60 border border-emerald-600 text-emerald-200 text-sm font-semibold flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-emerald-400" />
+              <div className="p-4 rounded-xl bg-slate-800 border border-[#FDB813]/40 text-slate-100 text-sm font-semibold flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-[#FDB813]" />
                 Thank you! Our Madhapur desk advisor will call you within 15 minutes.
               </div>
             ) : (
@@ -50,7 +50,7 @@ export default function BrandFooter({ onOpenVisitModal }) {
                   placeholder="Your Name"
                   value={inquiryName}
                   onChange={(e) => setInquiryName(e.target.value)}
-                  className="px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-emerald-500 flex-1"
+                  className="px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-[#FDB813] flex-1"
                 />
                 <input
                   type="tel"
@@ -58,11 +58,11 @@ export default function BrandFooter({ onOpenVisitModal }) {
                   placeholder="Phone Number (+91)"
                   value={inquiryPhone}
                   onChange={(e) => setInquiryPhone(e.target.value)}
-                  className="px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-emerald-500 flex-1"
+                  className="px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-[#FDB813] flex-1"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs tracking-wider uppercase transition-colors whitespace-nowrap shadow-sm"
+                  className="px-6 py-3 rounded-xl bg-[#FDB813] hover:bg-amber-400 text-slate-950 font-bold text-xs tracking-wider uppercase transition-colors whitespace-nowrap shadow-sm"
                 >
                   Request Kit
                 </button>
@@ -146,9 +146,8 @@ export default function BrandFooter({ onOpenVisitModal }) {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
-                <Link to="/interactive-studio" className="hover:text-[#FDB813] transition-colors font-bold text-white flex items-center gap-1">
-                  <span>Interactive Studio</span>
-                  <span className="text-[9px] bg-[#FDB813] text-slate-950 px-1 rounded font-black">NEW</span>
+                <Link to="/interactive-studio" className="hover:text-[#FDB813] transition-colors">
+                  Interactive Studio
                 </Link>
               </li>
               <li>

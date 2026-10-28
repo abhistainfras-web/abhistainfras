@@ -5,7 +5,7 @@ import HighwayTimeCalculator from './HighwayTimeCalculator';
 import AgroYieldCalculator from './AgroYieldCalculator';
 import VirtualSiteViewer from './VirtualSiteViewer';
 import SmartLandMatcher from './SmartLandMatcher';
-import { Compass, MapPin, Car, Trees, Eye, Sparkles, SlidersHorizontal } from 'lucide-react';
+import { Compass, MapPin, Car, Trees, Eye, SlidersHorizontal } from 'lucide-react';
 
 export default function InteractiveStudio({ onOpenVisitModal }) {
   const [activeTab, setActiveTab] = useState('plot'); // 'plot', 'vaastu', 'commute', 'agro', 'matcher', 'aerial'
@@ -47,7 +47,7 @@ export default function InteractiveStudio({ onOpenVisitModal }) {
       id: 'matcher',
       label: 'Interactive Venture Finder',
       shortLabel: 'Venture Finder',
-      icon: Sparkles,
+      icon: SlidersHorizontal,
       badge: 'Goal Match',
       desc: 'Find your ideal venture based on goals & budget'
     },

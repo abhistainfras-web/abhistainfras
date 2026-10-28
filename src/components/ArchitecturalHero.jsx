@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PROPERTIES } from '../data/properties';
-import { ShieldCheck, MapPin, ArrowRight, CheckCircle2, Trees, Calendar, Eye, FileText, Phone, Award, Sparkles } from 'lucide-react';
+import { ShieldCheck, MapPin, ArrowRight, CheckCircle2, Trees, Calendar, Eye, FileText, Phone, Award } from 'lucide-react';
 
 const FEATURED_CORRIDORS = [
   {

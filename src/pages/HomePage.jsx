@@ -8,7 +8,7 @@ import ArchitecturalPillars from '../components/ArchitecturalPillars';
 import BrandCalculator from '../components/BrandCalculator';
 import BrandStory from '../components/BrandStory';
 import { TESTIMONIALS, PROPERTIES } from '../data/properties';
-import { ArrowRight, ShieldCheck, CheckCircle2, Star, Quote, ChevronLeft, ChevronRight, Sparkles, MapPin } from 'lucide-react';
+import { ArrowRight, ShieldCheck, CheckCircle2, Star, Quote, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 
 export default function HomePage({
   onOpenVisitModal,

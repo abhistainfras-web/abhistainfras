@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Eye, MapPin, Sparkles, CheckCircle2, ShieldCheck, ChevronRight, Layers, Maximize2, X } from 'lucide-react';
+import { Eye, MapPin, CheckCircle2, ShieldCheck, ChevronRight, Layers, Maximize2, X } from 'lucide-react';
 
 const SITES = [
   {

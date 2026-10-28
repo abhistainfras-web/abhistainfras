@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PROPERTIES } from '../data/properties';
 import { formatCurrencyValue } from './PropertyCard';
-import { Sparkles, ArrowRight, CheckCircle2, RotateCcw, MapPin, ShieldCheck, HeartHandshake, Trees, Building2, TrendingUp } from 'lucide-react';
+import { SlidersHorizontal, ArrowRight, CheckCircle2, RotateCcw, MapPin, ShieldCheck, HeartHandshake, Trees, Building2, TrendingUp } from 'lucide-react';
 
 export default function SmartLandMatcher({ onOpenVisitModal }) {
   const [step, setStep] = useState(1);
@@ -71,7 +71,7 @@ export default function SmartLandMatcher({ onOpenVisitModal }) {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-[#FDB813] text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+            <SlidersHorizontal className="w-3.5 h-3.5" />
             <span>Venture Preference Matcher</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -261,7 +261,7 @@ export default function SmartLandMatcher({ onOpenVisitModal }) {
                 onClick={() => setStep(4)}
                 className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#FDB813] to-amber-500 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-amber-500/20 inline-flex items-center gap-2"
               >
-                <Sparkles className="w-4 h-4" />
+                <CheckCircle2 className="w-4 h-4" />
                 <span>Calculate My Exact Match</span>
               </button>
             </div>

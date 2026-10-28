@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, ShieldCheck, Cog, HeartHandshake, Sparkles, Building2, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { Compass, ShieldCheck, Cog, HeartHandshake, Leaf, Building2, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 const PILLARS = [
   {
@@ -14,7 +14,7 @@ const PILLARS = [
     num: '02',
     title: 'Unique Living Experiences',
     subtitle: 'Nature-Integrated Farmlands & Villas',
-    icon: Sparkles,
+    icon: Leaf,
     desc: 'We curate generational land investments that harmonize modern infrastructure with organic fruit plantations, weekend leisure pavilions, and energy-efficient layout architecture.',
     stat: 'Chemical-Free Farmland'
   },
@@ -66,7 +66,7 @@ export default function ArchitecturalPillars() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FDB813]/10 border border-[#FDB813]/30 text-[#FDB813] text-xs font-black uppercase tracking-widest mb-3">
-              <Sparkles className="w-3.5 h-3.5" />
+              <ShieldCheck className="w-3.5 h-3.5" />
               <span>The Abhista Standard</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">

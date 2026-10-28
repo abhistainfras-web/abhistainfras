@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import HistoricPortfolioGallery from '../components/HistoricPortfolioGallery';
 import { BENGALURU_COMPLETED_PROJECTS, PROPERTIES } from '../data/properties';
-import { ShieldCheck, CheckCircle2, TrendingUp, Building2, MapPin, Award, ArrowRight, Clock, Sparkles, Trees, Compass, Calendar, ChevronRight } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, TrendingUp, Building2, MapPin, Award, ArrowRight, Clock, Trees, Compass, Calendar, ChevronRight } from 'lucide-react';
 
 const CHRONOLOGY = [
   {

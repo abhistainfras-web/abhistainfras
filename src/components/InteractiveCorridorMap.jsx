@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Navigation, TrendingUp, Building2, Car, ArrowRight, ShieldCheck, Sparkles, CheckCircle2 } from 'lucide-react';
+import { MapPin, Navigation, TrendingUp, Building2, Car, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 const CORRIDORS = [
   {
