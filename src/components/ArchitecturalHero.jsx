@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { PROPERTIES } from '../data/properties';
 import { ShieldCheck, MapPin, ArrowRight, CheckCircle2, Trees, Calendar, Eye, FileText, Phone, Award } from 'lucide-react';
+import AnimatedCounter from './AnimatedCounter';
 
 const FEATURED_CORRIDORS = [
   {
@@ -162,19 +163,27 @@ export default function ArchitecturalHero({ onOpenVisitModal }) {
             {/* Real Estate Statistics HUD */}
             <div className="pt-6 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4 animate-fade-in-up" style={{animationDelay:'360ms'}}>
               <div>
-                <span className="text-2xl sm:text-3xl font-black text-white block">18+</span>
+                <span className="text-2xl sm:text-3xl font-black text-white block">
+                  <AnimatedCounter end={18} start={0} suffix="+" duration={1600} />
+                </span>
                 <span className="text-xs text-slate-400 font-medium">Years Established</span>
               </div>
               <div>
-                <span className="text-2xl sm:text-3xl font-black text-[#FDB813] block">11</span>
+                <span className="text-2xl sm:text-3xl font-black text-[#FDB813] block">
+                  <AnimatedCounter end={11} start={0} duration={1400} />
+                </span>
                 <span className="text-xs text-slate-400 font-medium">Active Master Ventures</span>
               </div>
               <div>
-                <span className="text-2xl sm:text-3xl font-black text-white block">1,200+</span>
+                <span className="text-2xl sm:text-3xl font-black text-white block">
+                  <AnimatedCounter end={1200} start={0} suffix="+" duration={1800} />
+                </span>
                 <span className="text-xs text-slate-400 font-medium">Acres Developed</span>
               </div>
               <div>
-                <span className="text-2xl sm:text-3xl font-black text-emerald-400 block">10,000+</span>
+                <span className="text-2xl sm:text-3xl font-black text-emerald-400 block">
+                  <AnimatedCounter end={10000} start={0} suffix="+" duration={2000} />
+                </span>
                 <span className="text-xs text-slate-400 font-medium">Satisfied Landowners</span>
               </div>
             </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import HistoricPortfolioGallery from '../components/HistoricPortfolioGallery';
 import { BENGALURU_COMPLETED_PROJECTS, PROPERTIES } from '../data/properties';
 import { ShieldCheck, CheckCircle2, TrendingUp, Building2, MapPin, Award, ArrowRight, Clock, Trees, Compass, Calendar, ChevronRight } from 'lucide-react';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const CHRONOLOGY = [
   {
@@ -129,19 +130,27 @@ export default function HistoryPage({ onOpenVisitModal }) {
           {/* Key Quick Counters */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-slate-800/80">
             <div className="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-              <span className="text-2xl sm:text-3xl font-black text-white block">2006</span>
+              <span className="text-2xl sm:text-3xl font-black text-white block">
+                <AnimatedCounter end={2006} start={1990} duration={1600} useIndianFormat={false} />
+              </span>
               <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Inception Year</span>
             </div>
             <div className="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-              <span className="text-2xl sm:text-3xl font-black text-[#FDB813] block">1,200+</span>
+              <span className="text-2xl sm:text-3xl font-black text-[#FDB813] block">
+                <AnimatedCounter end={1200} start={0} suffix="+" duration={1800} />
+              </span>
               <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Acres Masterplanned</span>
             </div>
             <div className="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-              <span className="text-2xl sm:text-3xl font-black text-white block">25+</span>
+              <span className="text-2xl sm:text-3xl font-black text-white block">
+                <AnimatedCounter end={25} start={0} suffix="+" duration={1600} />
+              </span>
               <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Delivered Benchmarks</span>
             </div>
             <div className="p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-              <span className="text-2xl sm:text-3xl font-black text-emerald-400 block">10,000+</span>
+              <span className="text-2xl sm:text-3xl font-black text-emerald-400 block">
+                <AnimatedCounter end={10000} start={0} suffix="+" duration={2000} />
+              </span>
               <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Happy Landowners</span>
             </div>
           </div>

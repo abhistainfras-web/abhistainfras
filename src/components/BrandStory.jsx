@@ -1,6 +1,7 @@
 import React from 'react';
 import { Award, Users, CheckCircle, ShieldCheck, Compass, HeartHandshake } from 'lucide-react';
 import { COMPANY_INFO } from '../data/properties';
+import AnimatedCounter from './AnimatedCounter';
 
 export default function BrandStory() {
   return (
@@ -58,15 +59,21 @@ export default function BrandStory() {
 
             <div className="border-t border-slate-200 pt-6 grid grid-cols-3 gap-4 text-center sm:text-left">
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-slate-900">2006</div>
+                <div className="text-2xl sm:text-3xl font-black text-slate-900">
+                  <AnimatedCounter end={2006} start={1990} duration={1600} useIndianFormat={false} />
+                </div>
                 <div className="text-[11px] text-slate-500 font-semibold mt-0.5">Foundation of Trust</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-[#b37a00]">2016</div>
+                <div className="text-2xl sm:text-3xl font-black text-[#b37a00]">
+                  <AnimatedCounter end={2016} start={2000} duration={1700} useIndianFormat={false} />
+                </div>
                 <div className="text-[11px] text-slate-500 font-semibold mt-0.5">Abhista Infra Incorp.</div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-emerald-700">10,000+</div>
+                <div className="text-2xl sm:text-3xl font-black text-emerald-700">
+                  <AnimatedCounter end={10000} start={0} suffix="+" duration={2000} />
+                </div>
                 <div className="text-[11px] text-slate-500 font-semibold mt-0.5">Happy Landowners</div>
               </div>
             </div>
@@ -110,19 +117,27 @@ export default function BrandStory() {
         {/* 4 Quantitative Milestones */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 sm:p-10 rounded-2xl bg-slate-950 text-white border border-slate-800 shadow-xl">
           <div>
-            <div className="text-3xl sm:text-4xl font-black text-white">18+</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">
+              <AnimatedCounter end={18} start={0} suffix="+" duration={1600} />
+            </div>
             <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Years of Operational Excellence</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-black text-[#FDB813]">1,200+</div>
+            <div className="text-3xl sm:text-4xl font-black text-[#FDB813]">
+              <AnimatedCounter end={1200} start={0} suffix="+" duration={1800} />
+            </div>
             <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Acres Master-Planned</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-black text-white">25+</div>
+            <div className="text-3xl sm:text-4xl font-black text-white">
+              <AnimatedCounter end={25} start={0} suffix="+" duration={1600} />
+            </div>
             <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Delivered Gated Ventures</div>
           </div>
           <div>
-            <div className="text-3xl sm:text-4xl font-black text-[#FDB813]">100%</div>
+            <div className="text-3xl sm:text-4xl font-black text-[#FDB813]">
+              <AnimatedCounter end={100} start={0} suffix="%" duration={1600} />
+            </div>
             <div className="text-xs sm:text-sm text-slate-400 font-medium mt-1">Clean Title Clearances</div>
           </div>
         </div>

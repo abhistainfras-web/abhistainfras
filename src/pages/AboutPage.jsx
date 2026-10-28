@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../data/properties';
 import { ShieldCheck, Users, Truck, Compass, HeartHandshake, CheckCircle2, ArrowRight } from 'lucide-react';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 export default function AboutPage({ onOpenVisitModal }) {
   const milestones = [
@@ -100,19 +101,27 @@ export default function AboutPage({ onOpenVisitModal }) {
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-100 text-center">
               <div>
-                <div className="text-3xl font-extrabold text-[#d99600]">18+</div>
+                <div className="text-3xl font-extrabold text-[#d99600]">
+                  <AnimatedCounter end={18} start={0} suffix="+" duration={1600} />
+                </div>
                 <div className="text-xs text-slate-500 font-semibold mt-1">Years Track Record</div>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-[#d99600]">1,200+</div>
+                <div className="text-3xl font-extrabold text-[#d99600]">
+                  <AnimatedCounter end={1200} start={0} suffix="+" duration={1800} />
+                </div>
                 <div className="text-xs text-slate-500 font-semibold mt-1">Acres Masterplanned</div>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-[#d99600]">25+</div>
+                <div className="text-3xl font-extrabold text-[#d99600]">
+                  <AnimatedCounter end={25} start={0} suffix="+" duration={1600} />
+                </div>
                 <div className="text-xs text-slate-500 font-semibold mt-1">Delivered Layouts</div>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-[#d99600]">10,000+</div>
+                <div className="text-3xl font-extrabold text-[#d99600]">
+                  <AnimatedCounter end={10000} start={0} suffix="+" duration={2000} />
+                </div>
                 <div className="text-xs text-slate-500 font-semibold mt-1">Happy Families</div>
               </div>
             </div>
