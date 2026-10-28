@@ -231,7 +231,7 @@ export default function HistoryPage({ onOpenVisitModal }) {
               
               <div className="flex flex-col sm:flex-row sm:items-center gap-5 pb-5 border-b border-slate-800">
                 {/* Large, Handsome Executive Photo */}
-                <div className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border-2 border-[#FDB813] shadow-xl shrink-0 bg-slate-800 mx-auto sm:mx-0">
+                <div className="w-32 h-44 sm:w-36 sm:h-48 rounded-2xl overflow-hidden border-2 border-[#FDB813] shadow-2xl shrink-0 bg-slate-800 mx-auto sm:mx-0">
                   <img
                     src="/assets/abhista/ramachandra-reddy.jpg"
                     alt="Mr. M. Ramachandra Reddy - Founder & Chairman"

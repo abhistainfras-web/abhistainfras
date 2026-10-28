@@ -26,7 +26,7 @@ export default function BrandStory() {
           {/* Left Column: Founder Portrait & Vision */}
           <div className="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 space-y-6 shadow-sm transition-shadow hover:shadow-lg">
             <div className="flex flex-col sm:flex-row sm:items-center gap-6 pb-6 border-b border-slate-200">
-              <div className="w-32 h-40 sm:w-36 sm:h-44 rounded-2xl overflow-hidden border-2 border-[#FDB813] shadow-lg shrink-0 bg-slate-200 mx-auto sm:mx-0">
+              <div className="w-36 h-48 sm:w-44 sm:h-56 rounded-2xl overflow-hidden border-2 border-[#FDB813] shadow-xl shrink-0 bg-slate-200 mx-auto sm:mx-0">
                 <img
                   src="/assets/abhista/ramachandra-reddy.jpg"
                   alt="Mr. M. Ramachandra Reddy - Founder & Managing Director"
