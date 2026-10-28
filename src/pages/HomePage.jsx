@@ -65,20 +65,20 @@ export default function HomePage({
       <ArchitecturalPillars />
 
       {/* 6. Landmark Communities Portfolio Strip */}
-      <section className="py-16 bg-white border-b border-slate-200">
+      <section className="py-14 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-xs font-black uppercase tracking-[0.25em] text-slate-400 mb-8">
-            Our Landmark Communities Portfolio (Hyderabad & Bengaluru)
+          <div className="text-center text-[11px] font-black uppercase tracking-[0.2em] text-slate-400 mb-8">
+            Our Landmark Communities (Hyderabad & Bengaluru)
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 sm:gap-6 items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 sm:gap-4 items-center">
             {clientLogos.map((c, i) => (
               <Link
                 key={i}
                 to={c.link}
-                className="p-3.5 rounded-2xl bg-slate-50 hover:bg-amber-50/50 border border-slate-200 hover:border-amber-300 flex items-center justify-center transition-all h-20 shadow-sm"
+                className="p-3 sm:p-3.5 rounded-xl bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-[#FDB813]/50 flex items-center justify-center transition-all h-18 sm:h-20 shadow-sm hover:shadow-md card-hover"
                 title={c.name}
               >
-                <img src={c.img} alt={c.name} className="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all" />
+                <img src={c.img} alt={c.name} className="max-h-10 sm:max-h-12 max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity" />
               </Link>
             ))}
           </div>
@@ -95,7 +95,7 @@ export default function HomePage({
                 Verified Buyer Feedback
               </span>
               <h2 className="text-3xl sm:text-5xl font-black text-white mt-1.5">
-                What Our Clients Say!!
+                What Our Clients Say
               </h2>
             </div>
 

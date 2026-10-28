@@ -99,14 +99,14 @@ export default function ArchitecturalHero({ onOpenVisitModal }) {
           <div className="lg:col-span-7 space-y-8">
             
             <div className="space-y-4">
-              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#FDB813] block">
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#FDB813] block animate-fade-in-up" style={{animationDelay:'0ms'}}>
                 Abhista Infras • Premier Plotted & Farmland Developments
               </span>
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.1] animate-fade-in-up" style={{animationDelay:'80ms'}}>
                 Invest in Hyderabad’s <br className="hidden sm:inline" />
                 <span className="text-[#FDB813]">Highest-Growth Corridors.</span>
               </h1>
-              <p className="text-sm sm:text-base lg:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base lg:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl animate-fade-in-up" style={{animationDelay:'160ms'}}>
                 Masterplanned organic farmlands and HMDA-approved gated communities along the Outer Ring Road (ORR) and National Highway 44. Complete legal transparency, company-owned construction machinery, and lifelong asset management.
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function ArchitecturalHero({ onOpenVisitModal }) {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2 animate-fade-in-up" style={{animationDelay:'280ms'}}>
               <button
                 onClick={() => onOpenVisitModal && onOpenVisitModal({
                   title: `Complimentary Site Visit - ${activeVenture.name}`,
@@ -160,7 +160,7 @@ export default function ArchitecturalHero({ onOpenVisitModal }) {
             </div>
 
             {/* Real Estate Statistics HUD */}
-            <div className="pt-6 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="pt-6 border-t border-slate-800 grid grid-cols-2 sm:grid-cols-4 gap-4 animate-fade-in-up" style={{animationDelay:'360ms'}}>
               <div>
                 <span className="text-2xl sm:text-3xl font-black text-white block">18+</span>
                 <span className="text-xs text-slate-400 font-medium">Years Established</span>
@@ -182,7 +182,7 @@ export default function ArchitecturalHero({ onOpenVisitModal }) {
           </div>
 
           {/* Right: Architectural Property Spotlight Card (5 cols) */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 animate-slide-in-right" style={{animationDelay:'200ms'}}>
             <div className="rounded-3xl overflow-hidden border border-slate-800 bg-slate-900/90 shadow-2xl backdrop-blur-sm">
               
               {/* Photo Viewport */}

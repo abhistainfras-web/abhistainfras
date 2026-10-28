@@ -184,7 +184,7 @@ export default function App() {
             href="https://wa.me/918185898089?text=Hello%20Abhista%20Infra,%20I%20would%20like%20to%20know%20more%20about%20your%20ventures."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-13 h-13 px-4 py-3 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-2 shadow-xl hover:scale-105 transition-all"
+            className="px-4 py-3 rounded-full bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs flex items-center gap-2 shadow-xl hover:scale-105 transition-all"
             title="Direct WhatsApp"
           >
             <MessageSquare className="w-5 h-5" />

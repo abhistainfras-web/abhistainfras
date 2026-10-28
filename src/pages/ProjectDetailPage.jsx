@@ -143,7 +143,7 @@ export default function ProjectDetailPage({ onOpenVisitModal }) {
             <button
               key={idx}
               onClick={() => setSelectedPhoto(idx)}
-              className={`relative flex-shrink-0 w-28 h-18 rounded-xl overflow-hidden border-2 transition-all ${
+              className={`relative flex-shrink-0 w-28 h-16 sm:h-20 rounded-xl overflow-hidden border-2 transition-all ${
                 selectedPhoto === idx ? 'border-[#FDB813] scale-105 shadow-md' : 'border-transparent opacity-60 hover:opacity-100'
               }`}
             >

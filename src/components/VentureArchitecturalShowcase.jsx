@@ -25,7 +25,7 @@ export default function VentureArchitecturalShowcase({ onSelectProperty, onOpenV
   ];
 
   return (
-    <section className="py-24 bg-[#FAF9F6] text-slate-900 border-b border-slate-200" id="signature-portfolio">
+    <section className="py-20 sm:py-24 bg-[#FAF9F6] text-slate-900 border-b border-slate-200" id="signature-portfolio">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -89,8 +89,8 @@ export default function VentureArchitecturalShowcase({ onSelectProperty, onOpenV
                     onClick={() => setSelectedPropertyId(p.id)}
                     className={`p-4 sm:p-5 rounded-2xl border transition-all cursor-pointer relative group flex items-center justify-between ${
                       isSelected
-                        ? 'bg-white border-[#FDB813] shadow-xl shadow-amber-500/10 scale-[1.01]'
-                        : 'bg-white/80 hover:bg-white border-slate-200/90 hover:border-slate-300'
+                        ? 'bg-white border-[#FDB813] shadow-xl shadow-amber-500/15 scale-[1.01]'
+                        : 'bg-white/80 hover:bg-white border-slate-200/90 hover:border-[#FDB813]/40 hover:shadow-md'
                     }`}
                   >
                     <div className="flex items-center gap-3.5">

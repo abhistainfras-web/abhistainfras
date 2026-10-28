@@ -8,7 +8,7 @@ export default function BrandStory() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-16 animate-fade-in-up">
           <span className="text-emerald-800 text-xs font-bold tracking-widest uppercase bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full">
             Our Heritage & Values
           </span>
@@ -24,7 +24,7 @@ export default function BrandStory() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20">
           
           {/* Left Column: Founder Portrait & Vision */}
-          <div className="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 space-y-6 shadow-sm">
+          <div className="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 space-y-6 shadow-sm transition-shadow hover:shadow-lg">
             <div className="flex flex-col sm:flex-row sm:items-center gap-6 pb-6 border-b border-slate-200">
               <div className="w-32 h-40 sm:w-36 sm:h-44 rounded-2xl overflow-hidden border-2 border-[#FDB813] shadow-lg shrink-0 bg-slate-200 mx-auto sm:mx-0">
                 <img
@@ -74,7 +74,7 @@ export default function BrandStory() {
 
           {/* Right Column: Backward Integration USP */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-emerald-600/40 transition-colors">
+            <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-[#FDB813]/40 transition-all card-hover">
               <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
                 <ShieldCheck className="w-5 h-5" />
               </div>
@@ -84,7 +84,7 @@ export default function BrandStory() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-emerald-600/40 transition-colors">
+            <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-[#FDB813]/40 transition-all card-hover">
               <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
                 <Users className="w-5 h-5" />
               </div>
@@ -94,7 +94,7 @@ export default function BrandStory() {
               </p>
             </div>
 
-            <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-emerald-600/40 transition-colors">
+            <div className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm hover:border-[#FDB813]/40 transition-all card-hover">
               <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-4">
                 <HeartHandshake className="w-5 h-5" />
               </div>
@@ -108,7 +108,7 @@ export default function BrandStory() {
         </div>
 
         {/* 4 Quantitative Milestones */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 rounded-2xl bg-emerald-950 text-white">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 sm:p-10 rounded-2xl bg-gradient-to-br from-slate-900 via-emerald-950 to-slate-900 text-white border border-emerald-900/50 shadow-xl">
           <div>
             <div className="text-3xl sm:text-4xl font-bold text-emerald-400">18+</div>
             <div className="text-xs sm:text-sm text-slate-300 font-medium mt-1">Years of Operational Excellence</div>

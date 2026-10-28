@@ -24,7 +24,7 @@ export default function BrandFooter({ onOpenVisitModal }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Quick Inquiry Callout Bar */}
-        <div className="bg-emerald-950/80 border border-emerald-800/60 rounded-2xl p-8 mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-gradient-to-r from-slate-900 via-emerald-950 to-slate-900 border border-emerald-800/50 rounded-2xl p-8 mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
           <div className="lg:col-span-6 space-y-2">
             <span className="text-emerald-400 text-xs font-bold uppercase tracking-widest">
               Direct Developer Desk
