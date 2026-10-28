@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, Send, ShieldCheck, ArrowRight, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ShieldCheck, ArrowRight, MessageSquare, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { COMPANY_INFO, PROPERTIES } from '../data/properties';
 
 export default function BrandFooter({ onOpenVisitModal }) {
@@ -115,6 +115,45 @@ export default function BrandFooter({ onOpenVisitModal }) {
                 <span>Mon – Sat: 9:30 AM – 7:00 PM (Sunday Site Visits Open)</span>
               </div>
             </div>
+
+            {/* Official Social Media Channels */}
+            <div className="pt-3 border-t border-slate-800">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-[#FDB813] block mb-2.5">
+                Official Social Channels
+              </span>
+              <div className="flex items-center gap-2.5">
+                <a
+                  href={COMPANY_INFO.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-[#FDB813] hover:text-slate-950 text-slate-300 flex items-center justify-center transition-colors border border-slate-700 shadow-sm"
+                  title="Follow Abhista Infras on Instagram"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a
+                  href={COMPANY_INFO.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-[#FDB813] hover:text-slate-950 text-slate-300 flex items-center justify-center transition-colors border border-slate-700 shadow-sm"
+                  title="Follow Abhista Infras on Facebook"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a
+                  href={COMPANY_INFO.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-[#FDB813] hover:text-slate-950 text-slate-300 flex items-center justify-center transition-colors border border-slate-700 shadow-sm"
+                  title="Connect with Abhista Infras on LinkedIn"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Col 2: All 10 Ventures (3 cols) */}
@@ -204,6 +243,22 @@ export default function BrandFooter({ onOpenVisitModal }) {
             &copy; {new Date().getFullYear()} Abhista Infra Developers. All rights reserved.
           </p>
 
+          <div className="flex items-center gap-3 text-xs text-slate-400">
+            <a href={COMPANY_INFO.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-[#FDB813] transition-colors flex items-center gap-1.5" title="Instagram">
+              <Instagram className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Instagram</span>
+            </a>
+            <span>•</span>
+            <a href={COMPANY_INFO.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-[#FDB813] transition-colors flex items-center gap-1.5" title="Facebook">
+              <Facebook className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Facebook</span>
+            </a>
+            <span>•</span>
+            <a href={COMPANY_INFO.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[#FDB813] transition-colors flex items-center gap-1.5" title="LinkedIn">
+              <Linkedin className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">LinkedIn</span>
+            </a>
+          </div>
           <div className="flex items-center gap-6 text-[11px]">
             <span>HMDA & DTCP Approved</span>
             <span>•</span>

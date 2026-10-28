@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO, PROPERTIES } from '../data/properties';
-import { MapPin, Phone, Mail, Clock, Send, ShieldCheck, CheckCircle2, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, ShieldCheck, CheckCircle2, MessageSquare, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 export default function ContactPage({ onOpenVisitModal }) {
   const [formData, setFormData] = useState({
@@ -104,6 +104,43 @@ export default function ContactPage({ onOpenVisitModal }) {
                     <span>Monday – Saturday: 9:30 AM – 7:00 PM</span>
                     <span className="block text-emerald-700 font-semibold mt-0.5">Sunday Site Inspections Open by Appointment</span>
                   </div>
+                </div>
+              </div>
+
+              {/* Official Social Media Profiles */}
+              <div className="pt-3 border-t border-slate-200">
+                <strong className="text-slate-900 block text-xs font-bold mb-2">Official Social Media Profiles</strong>
+                <div className="grid grid-cols-3 gap-2">
+                  <a
+                    href={COMPANY_INFO.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2.5 px-2 rounded-xl bg-slate-50 hover:bg-pink-50 hover:text-pink-600 hover:border-pink-200 text-slate-700 border border-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+                    title="Follow Abhista Infras on Instagram"
+                  >
+                    <Instagram className="w-4 h-4 text-pink-600" />
+                    <span>Instagram</span>
+                  </a>
+                  <a
+                    href={COMPANY_INFO.social.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2.5 px-2 rounded-xl bg-slate-50 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 text-slate-700 border border-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+                    title="Follow Abhista Infras on Facebook"
+                  >
+                    <Facebook className="w-4 h-4 text-blue-600" />
+                    <span>Facebook</span>
+                  </a>
+                  <a
+                    href={COMPANY_INFO.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-2.5 px-2 rounded-xl bg-slate-50 hover:bg-sky-50 hover:text-sky-700 hover:border-sky-200 text-slate-700 border border-slate-200 text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors shadow-xs"
+                    title="Connect with Abhista Infras on LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4 text-sky-700" />
+                    <span>LinkedIn</span>
+                  </a>
                 </div>
               </div>
 

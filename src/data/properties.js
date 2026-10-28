@@ -21,9 +21,9 @@ export const COMPANY_INFO = {
   model: "Full Backward Integration Model (Company-Owned Machinery, Civil & Legal Cadre, Horticulture Nurseries)",
   philosophy: "Building Relationships & Building Success — Grounded in Sattva Vikasa (Harmony, Balance, Purity & Beauty)",
   social: {
-    facebook: "https://www.facebook.com/AbhistaProperties",
-    instagram: "https://www.instagram.com/abhista.in_realestate/",
-    linkedin: "https://www.linkedin.com/company/abhista/",
+    facebook: "https://www.facebook.com/share/1Dt5PZ1Xg3/",
+    instagram: "https://www.instagram.com/abhistainfras?obrf=M3hxeDl0dXJkcXQ4",
+    linkedin: "https://www.linkedin.com/company/abhistainfras/",
     whatsapp: "https://wa.me/917075528334"
   }
 };

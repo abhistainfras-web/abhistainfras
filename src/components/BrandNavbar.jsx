@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Phone, ChevronDown, Calendar, Building2, Trees, ShieldCheck, Calculator, Users, Clock, Menu, X, TrendingUp, MapPin, SlidersHorizontal } from 'lucide-react';
+import { COMPANY_INFO } from '../data/properties';
+import { Phone, ChevronDown, Calendar, Building2, Trees, ShieldCheck, Calculator, Users, Clock, Menu, X, TrendingUp, MapPin, SlidersHorizontal, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 export default function BrandNavbar({ onOpenVisitModal }) {
   const [scrolled, setScrolled] = useState(false);
@@ -447,6 +448,46 @@ export default function BrandNavbar({ onOpenVisitModal }) {
             >
               Contact Madhapur HQ
             </NavLink>
+          
+
+            {/* Social Media Profiles */}
+            <div className="pt-4 border-t border-slate-200 flex items-center justify-between px-2">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                Follow Abhista Infras
+              </span>
+              <div className="flex items-center gap-2">
+                <a
+                  href={COMPANY_INFO.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#FDB813] hover:text-slate-950 text-slate-700 flex items-center justify-center transition-colors"
+                  title="Instagram"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a
+                  href={COMPANY_INFO.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#FDB813] hover:text-slate-950 text-slate-700 flex items-center justify-center transition-colors"
+                  title="Facebook"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a
+                  href={COMPANY_INFO.social.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-lg bg-slate-100 hover:bg-[#FDB813] hover:text-slate-950 text-slate-700 flex items-center justify-center transition-colors"
+                  title="LinkedIn"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
           </nav>
 
         </div>
