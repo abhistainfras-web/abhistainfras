@@ -24,6 +24,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^4.3.4",
     "oxlint": "^1.89.0",
+    "puppeteer-core": "^24.43.1",
     "vite": "^6.0.7"
   }
 }

@@ -50,7 +50,7 @@ export default function ViewingModal({
               <img
                 src="/assets/abhista/abhista-logo.png"
                 alt="abhista infras"
-                className="h-9 w-auto mx-auto mb-3 object-contain"
+                className="h-12 sm:h-14 w-auto mx-auto mb-3 object-contain"
               />
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-200 bg-amber-50 text-amber-900 text-[10px] uppercase tracking-widest font-bold mb-2">
                 <ShieldCheck className="w-3.5 h-3.5 text-amber-700" />

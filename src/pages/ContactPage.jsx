@@ -56,7 +56,7 @@ export default function ContactPage({ onOpenVisitModal }) {
                 <img
                   src="/assets/abhista/abhista-logo.png"
                   alt="abhista infras"
-                  className="h-10 w-auto object-contain"
+                  className="h-12 sm:h-14 lg:h-16 w-auto object-contain"
                 />
               </div>
 
@@ -167,56 +167,67 @@ export default function ContactPage({ onOpenVisitModal }) {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
+                      <label htmlFor="contact-name" className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
                         Full Name *
                       </label>
                       <input
+                        id="contact-name"
+                        name="name"
+                        autoComplete="name"
                         type="text"
                         required
                         placeholder="Your Name"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-amber-500 bg-slate-50"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-[#FDB813] bg-slate-50"
                       />
                     </div>
 
                     <div>
-                      <label className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
+                      <label htmlFor="contact-phone" className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
                         Phone Number *
                       </label>
                       <input
+                        id="contact-phone"
+                        name="phone"
+                        autoComplete="tel"
                         type="tel"
                         required
                         placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-amber-500 bg-slate-50"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-[#FDB813] bg-slate-50"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
+                      <label htmlFor="contact-email" className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
                         Email Address
                       </label>
                       <input
+                        id="contact-email"
+                        name="email"
+                        autoComplete="email"
                         type="email"
                         placeholder="name@example.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-amber-500 bg-slate-50"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-[#FDB813] bg-slate-50"
                       />
                     </div>
 
                     <div>
-                      <label className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
+                      <label htmlFor="contact-venture" className="text-[10px] uppercase font-bold text-slate-500 block mb-1">
                         Interested Venture
                       </label>
                       <select
+                        id="contact-venture"
+                        name="venture"
                         value={formData.venture}
                         onChange={(e) => setFormData({ ...formData, venture: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-amber-500 bg-slate-50 cursor-pointer"
+                        className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-[#FDB813] bg-slate-50 cursor-pointer"
                       >
                         {PROPERTIES.map((p) => (
                           <option key={p.id} value={p.title}>{p.title} ({p.enclave})</option>

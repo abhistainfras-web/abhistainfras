@@ -49,7 +49,7 @@ export default function ProjectsPage({ onOpenVisitModal }) {
   });
 
   const categories = [
-    { id: 'all', label: 'All Ventures (10)' },
+    { id: 'all', label: `All Ventures (${PROPERTIES.length})` },
     { id: 'farmland', label: 'Organic Farmlands' },
     { id: 'residential', label: 'HMDA & Residential' },
     { id: 'ongoing', label: 'Ongoing Projects' },
@@ -181,10 +181,14 @@ export default function ProjectsPage({ onOpenVisitModal }) {
       {/* Ventures Cards Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
         
-        {/* Results Counter */}
-        <div className="mb-6 flex items-center justify-between text-xs text-slate-500">
-          <span>Showing <strong>{filtered.length}</strong> ventures matching your criteria</span>
-          <span className="hidden sm:inline">100% Freehold Title Scrutinized</span>
+        {/* Results Counter & Semantic Heading */}
+        <div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
+          <h2 className="text-lg font-black text-slate-900 tracking-tight">
+            Curated Venture Portfolio ({filtered.length})
+          </h2>
+          <span className="text-xs text-slate-500 font-semibold">
+            100% Freehold Title Scrutinized & Spot Registration
+          </span>
         </div>
 
         {filtered.length === 0 ? (
@@ -285,7 +289,7 @@ export default function ProjectsPage({ onOpenVisitModal }) {
                         to={`/projects/${item.id}`}
                         className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-[#FDB813] hover:text-slate-950 text-white font-bold text-xs tracking-wider uppercase transition-all shadow-sm"
                       >
-                        View Webpage
+                        Explore Venture
                       </Link>
                     </div>
                   </div>

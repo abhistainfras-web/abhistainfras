@@ -76,7 +76,7 @@ export default function OngoingProjectsPage({ onOpenVisitModal }) {
                   <div className="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
                     <div className="text-sm font-extrabold text-slate-900">{formatCurrencyValue(item.priceINR, 'INR')}</div>
                     <Link to={`/projects/${item.id}`} className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-[#FDB813] hover:text-slate-950 text-white font-bold text-[11px] uppercase tracking-wider transition-all">
-                      Details
+                      Explore Venture
                     </Link>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function OngoingProjectsPage({ onOpenVisitModal }) {
                   <div className="pt-4 border-t border-slate-100 mt-4 flex items-center justify-between">
                     <div className="text-sm font-extrabold text-slate-900">{formatCurrencyValue(item.priceINR, 'INR')}</div>
                     <Link to={`/projects/${item.id}`} className="px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-[#FDB813] hover:text-slate-950 text-white font-bold text-[11px] uppercase tracking-wider transition-all">
-                      Details
+                      Explore Venture
                     </Link>
                   </div>
                 </div>

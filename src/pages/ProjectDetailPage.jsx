@@ -216,12 +216,19 @@ export default function ProjectDetailPage({ onOpenVisitModal }) {
                   />
                 </div>
               ) : (
-                <div className="p-12 rounded-2xl border border-dashed border-slate-300 text-center bg-slate-50">
+                <div className="p-8 sm:p-12 rounded-2xl border border-dashed border-slate-300 text-center bg-slate-50">
                   <Layers className="w-10 h-10 text-slate-400 mx-auto mb-2" />
-                  <h4 className="text-base font-bold text-slate-800">Layout Demarcation Plan Available</h4>
+                  <h4 className="text-base font-bold text-slate-800">Demarcated CAD Blueprint Available</h4>
                   <p className="text-xs text-slate-500 mt-1 max-w-md mx-auto">
-                    Layout plan with plot boundaries, water connectivity, and road networks is available upon request.
+                    Layout plan with plot boundaries, water connectivity, road networks, and sub-registrar survey sketch is available upon request.
                   </p>
+                  <button
+                    onClick={() => onOpenVisitModal && onOpenVisitModal(property)}
+                    className="mt-4 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-[#FDB813] hover:text-slate-950 text-white font-bold text-xs uppercase tracking-wider transition-all inline-flex items-center gap-1.5 shadow-sm"
+                  >
+                    <span>Request CAD Demarcation Blueprint</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 </div>
               )}
 

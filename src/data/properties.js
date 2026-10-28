@@ -25,7 +25,7 @@ export const COMPANY_INFO = {
     facebook: "https://www.facebook.com/AbhistaProperties",
     instagram: "https://www.instagram.com/abhista.in_realestate/",
     linkedin: "https://www.linkedin.com/company/abhista/",
-    whatsapp: "https://wa.me/+918185898089"
+    whatsapp: "https://wa.me/918185898089"
   }
 };
 
