@@ -9,13 +9,21 @@ export default function ContactPage({ onOpenVisitModal }) {
     phone: '',
     email: '',
     venture: 'Arrjava Farms, Patancheru',
-    message: ''
+    message: '',
+    consent: false
   });
+  const [submittedData, setSubmittedData] = useState(null);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.phone) return;
+    const submissionPayload = {
+      ...formData,
+      consent: formData.consent ? "true" : "false"
+    };
+    setSubmittedData(submissionPayload);
+    console.log('Contact form submitted payload:', submissionPayload);
     setSubmitted(true);
   };
 
@@ -187,15 +195,23 @@ export default function ContactPage({ onOpenVisitModal }) {
                   <p className="text-xs text-slate-600 max-w-sm mx-auto leading-relaxed">
                     Your request has been received. Our senior land advisor from Madhapur Head Office will reach you at <strong>{formData.phone}</strong> shortly.
                   </p>
-                  <button
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({ name: '', phone: '', email: '', venture: 'Arrjava Farms, Patancheru', message: '' });
-                    }}
-                    className="mt-2 px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold"
-                  >
-                    Submit Another Inquiry
-                  </button>
+                  {submittedData && (
+                    <div className="text-[11px] text-slate-500 bg-white py-1.5 px-3 rounded-lg border border-emerald-200 inline-block font-medium">
+                      Communication consent: <strong className="text-slate-800">{submittedData.consent}</strong>
+                    </div>
+                  )}
+                  <div>
+                    <button
+                      onClick={() => {
+                        setSubmitted(false);
+                        setSubmittedData(null);
+                        setFormData({ name: '', phone: '', email: '', venture: 'Arrjava Farms, Patancheru', message: '', consent: false });
+                      }}
+                      className="mt-2 px-5 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition-colors"
+                    >
+                      Submit Another Inquiry
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -282,6 +298,25 @@ export default function ContactPage({ onOpenVisitModal }) {
                       className="w-full px-4 py-3 rounded-xl border border-slate-300 text-xs font-semibold text-slate-800 focus:outline-none focus:border-amber-500 bg-slate-50"
                     ></textarea>
                   </div>
+
+                  {/* Communication Consent Checkbox */}
+                  <label
+                    htmlFor="contact-consent"
+                    className="w-full flex items-start gap-3 p-3.5 sm:p-4 rounded-xl bg-sky-500 text-white cursor-pointer select-none transition-colors hover:bg-sky-600/95 shadow-xs"
+                  >
+                    <input
+                      type="checkbox"
+                      id="contact-consent"
+                      name="consent"
+                      value={formData.consent ? "true" : "false"}
+                      checked={formData.consent}
+                      onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
+                      className="mt-0.5 sm:mt-0.5 w-4 h-4 rounded-none border border-white/70 bg-white text-sky-600 accent-slate-900 focus:ring-0 cursor-pointer shrink-0"
+                    />
+                    <span className="text-xs sm:text-xs leading-relaxed text-white font-medium flex-1">
+                      You agree to receive communication messages via RCS, SMS, WhatsApp, Voice Call &amp; Email.
+                    </span>
+                  </label>
 
                   <button
                     type="submit"
