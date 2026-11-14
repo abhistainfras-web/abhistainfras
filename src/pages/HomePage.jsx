@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import ArchitecturalHero from '../components/ArchitecturalHero';
 import VentureArchitecturalShowcase from '../components/VentureArchitecturalShowcase';
-import InteractiveStudio from '../components/InteractiveStudio';
 import InteractiveCorridorMap from '../components/InteractiveCorridorMap';
 import ArchitecturalPillars from '../components/ArchitecturalPillars';
 import BrandCalculator from '../components/BrandCalculator';
@@ -55,10 +54,7 @@ export default function HomePage({
         onOpenVisitModal={onOpenVisitModal}
       />
 
-      {/* 3. The 6-Tool Interactive Creative Discovery Studio */}
-      <InteractiveStudio onOpenVisitModal={onOpenVisitModal} />
-
-      {/* 4. Strategic Location Intelligence Corridor Map */}
+      {/* 3. Strategic Location Intelligence Corridor Map */}
       <InteractiveCorridorMap onOpenVisitModal={onOpenVisitModal} />
 
       {/* 5. The Abhista Standard - 6 Architectural Pillars */}

@@ -232,24 +232,7 @@ export default function ProjectDetailPage({ onOpenVisitModal }) {
                 </div>
               )}
 
-              {/* Interactive Layout Studio Callout */}
-              <div className="p-5 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-lg">
-                <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-[#FDB813] block">
-                    Interactive Plot Blueprint & Vaastu Tool
-                  </span>
-                  <div className="text-sm font-extrabold text-white mt-0.5">
-                    Explore individual plot numbers, Ishanya/East facings, & dimensions
-                  </div>
-                </div>
-                <Link
-                  to="/interactive-studio"
-                  className="px-5 py-2.5 rounded-xl bg-[#FDB813] hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all whitespace-nowrap text-center shadow-md shadow-[#FDB813]/20"
-                >
-                  Launch Plot Explorer &rarr;
-                </Link>
-              </div>
-            </section>
+              </section>
 
             {/* 3. Amenities & Infrastructure */}
             <section className="space-y-4">

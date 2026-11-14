@@ -23,10 +23,7 @@ const ROUTE_META = {
     title: 'Strategic Growth Corridors | Outer Ring Road (ORR) & NH-44 | Abhista Infras',
     desc: 'Discover high-yield real estate corridors: Patancheru ORR Exit 3, Kothur NH-44, Shamirpet Genome Valley, and Bengaluru South.'
   },
-  '/interactive-studio': {
-    title: 'Interactive Discovery Studio (6 Architectural Tools) | Abhista Infras',
-    desc: 'Interactive CAD plot explorer, Vedic Vaastu compass, highway commute matrix, agro timber yield calculator, and 360° virtual site viewer.'
-  },
+  
   '/about': {
     title: 'About Abhista & Leadership | Mr. M. Ramachandra Reddy | Abhista Infras',
     desc: '18+ years of unassailable trust, backward integration, and direct stewardship under Founder Mr. M. Ramachandra Reddy.'

@@ -274,20 +274,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               )}
             </div>
 
-            {/* Studio Navigation Item */}
-            <NavLink
-              to="/interactive-studio"
-              className={({ isActive }) =>
-                `text-[13px] font-bold tracking-wider uppercase whitespace-nowrap px-3 py-1.5 rounded-xl transition-all flex items-center gap-1.5 ${
-                  isActive
-                    ? 'text-slate-950 bg-amber-500/15 border border-amber-400'
-                    : 'text-slate-800 hover:text-slate-950 hover:bg-slate-50 border border-slate-200/60'
-                }`
-              }
-            >
-              <SlidersHorizontal className="w-3.5 h-3.5 text-[#b37a00]" />
-              <span>Studio</span>
-            </NavLink>
+            
 
             {/* Contact */}
             <NavLink to="/contact" className={({ isActive }) => navItemClass(isActive)}>
@@ -430,15 +417,7 @@ export default function BrandNavbar({ onOpenVisitModal }) {
               Growth Corridors (ORR, NH-44 & RRR)
             </NavLink>
 
-            {/* Interactive Studio */}
-            <NavLink
-              to="/interactive-studio"
-              onClick={() => setMobileMenuOpen(false)}
-              className={({ isActive }) => `flex items-center gap-2 min-h-[44px] text-sm font-bold px-3 py-2 rounded-xl transition-colors ${isActive ? 'text-[#b37a00] bg-amber-50' : 'text-slate-900 hover:bg-slate-50'}`}
-            >
-              <SlidersHorizontal className="w-4 h-4 text-slate-400" />
-              <span>Interactive Discovery Studio</span>
-            </NavLink>
+            
 
             {/* Contact */}
             <NavLink

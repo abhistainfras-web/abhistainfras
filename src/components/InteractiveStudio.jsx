@@ -1,31 +1,20 @@
 import React, { useState } from 'react';
-import InteractivePlotExplorer from './InteractivePlotExplorer';
-import VaastuCompassExplorer from './VaastuCompassExplorer';
 import HighwayTimeCalculator from './HighwayTimeCalculator';
 import AgroYieldCalculator from './AgroYieldCalculator';
-import VirtualSiteViewer from './VirtualSiteViewer';
 import SmartLandMatcher from './SmartLandMatcher';
-import { Compass, MapPin, Car, Trees, Eye, SlidersHorizontal } from 'lucide-react';
+import { Car, Trees, SlidersHorizontal } from 'lucide-react';
 
 export default function InteractiveStudio({ onOpenVisitModal }) {
-  const [activeTab, setActiveTab] = useState('plot'); // 'plot', 'vaastu', 'commute', 'agro', 'matcher', 'aerial'
+  const [activeTab, setActiveTab] = useState('matcher'); // 'matcher', 'commute', 'agro'
 
   const tools = [
     {
-      id: 'plot',
-      label: 'Master Plan & Plot Selector',
-      shortLabel: 'Plot Selector',
-      icon: MapPin,
-      badge: 'Interactive CAD',
-      desc: 'Explore plot dimensions, facing, and live availability'
-    },
-    {
-      id: 'vaastu',
-      label: 'Vaastu Shastra Compass',
-      shortLabel: 'Vaastu Compass',
-      icon: Compass,
-      badge: 'Pillar 3',
-      desc: 'Audit cosmic energy zones & directional compliance'
+      id: 'matcher',
+      label: 'Interactive Venture Finder',
+      shortLabel: 'Venture Finder',
+      icon: SlidersHorizontal,
+      badge: 'Goal Match',
+      desc: 'Find your ideal venture based on goals & budget'
     },
     {
       id: 'commute',
@@ -42,29 +31,13 @@ export default function InteractiveStudio({ onOpenVisitModal }) {
       icon: Trees,
       badge: 'Sec 10(1) Tax Free',
       desc: 'Project sandalwood, teak & fruit harvest returns'
-    },
-    {
-      id: 'matcher',
-      label: 'Interactive Venture Finder',
-      shortLabel: 'Venture Finder',
-      icon: SlidersHorizontal,
-      badge: 'Goal Match',
-      desc: 'Find your ideal venture based on goals & budget'
-    },
-    {
-      id: 'aerial',
-      label: '360° Aerial Site Hotspots',
-      shortLabel: 'Aerial Tour',
-      icon: Eye,
-      badge: 'Drone Survey',
-      desc: 'Inspect layout roads, clubhouse & ground progress'
     }
   ];
 
   return (
     <div className="bg-slate-950 text-white relative border-y border-slate-800" id="interactive-studio">
       
-      {/* Studio Header & Tab Switcher Bar - Compact, Sleek & Zero Ugly Scrollbar */}
+      {/* Studio Header & Tab Switcher Bar */}
       <div className="bg-slate-900/95 border-b border-slate-800 sticky top-[64px] sm:top-[74px] z-30 backdrop-blur-md shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3">
           
@@ -79,7 +52,7 @@ export default function InteractiveStudio({ onOpenVisitModal }) {
               </h2>
             </div>
 
-            {/* Horizontal Tabs - Strict Zero-Scrollbar Guarantee */}
+            {/* Horizontal Tabs */}
             <div
               className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar scrollbar-none py-0.5"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -110,12 +83,9 @@ export default function InteractiveStudio({ onOpenVisitModal }) {
 
       {/* Render Active Tool */}
       <div className="transition-all duration-300">
-        {activeTab === 'plot' && <InteractivePlotExplorer onOpenVisitModal={onOpenVisitModal} />}
-        {activeTab === 'vaastu' && <VaastuCompassExplorer onOpenVisitModal={onOpenVisitModal} />}
+        {activeTab === 'matcher' && <SmartLandMatcher onOpenVisitModal={onOpenVisitModal} />}
         {activeTab === 'commute' && <HighwayTimeCalculator onOpenVisitModal={onOpenVisitModal} />}
         {activeTab === 'agro' && <AgroYieldCalculator onOpenVisitModal={onOpenVisitModal} />}
-        {activeTab === 'matcher' && <SmartLandMatcher onOpenVisitModal={onOpenVisitModal} />}
-        {activeTab === 'aerial' && <VirtualSiteViewer onOpenVisitModal={onOpenVisitModal} />}
       </div>
 
     </div>
